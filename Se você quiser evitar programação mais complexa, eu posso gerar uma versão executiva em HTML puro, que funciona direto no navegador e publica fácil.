@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Higor dos Ramos Aguiar | Legal Counsel Sênior • Gerente Jurídico</title>
+  <meta name="description" content="Legal Counsel Sênior e Gerente Jurídico com 18+ anos em infraestrutura, contratos complexos e licitações (Lei 14.133/21 e 13.303/16). Governança, compliance, gestão de riscos e resultados financeiros." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <!-- Open Graph (LinkedIn) -->
+  <meta property="og:title" content="Higor dos Ramos Aguiar | Legal Counsel Sênior • Gerente Jurídico" />
+  <meta property="og:description" content="Contratos complexos • Licitações • Governança • Compliance • Gestão de riscos • Resultados (R$ 8MM / R$ 150MM/ano / R$ 13MM/mês)" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <!-- Coloque a URL do site quando publicar -->
+  <meta property="og:url" content="https://SEU-DOMINIO-AQUI" />
+
+  <!-- JSON-LD (SEO / Rich results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Higor dos Ramos Aguiar",
+    "jobTitle": "Legal Counsel Sênior, Gerente Jurídico",
+    "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR" },
+    "email": "mailto:aguiar.higor@gmail.com",
+    "telephone": "+55-11-98861-0446",
+    "url": "https://SEU-DOMINIO-AQUI",
+    "sameAs": ["https://www.linkedin.com/in/adv-higor-aguiar"]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a33;
+      --ink:#e8eefc;
+      --muted:#a7b3d0;
+      --line:rgba(255,255,255,.10);
+      --accent:#7dd3fc;
+      --accent2:#a78bfa;
+      --good:#34d399;
+      --shadow: 0 12px 40px rgba(0,0,0,.35);
+      --radius:20px;
+      --max: 1120px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 10% 0%, rgba(125,211,252,.18), transparent 50%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(167,139,250,.14), transparent 55%),
+                  linear-gradient(180deg, #070b14 0%, #0b1220 45%, #070b14 100%);
+      color: var(--ink);
+    }
+
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding: 22px 18px 60px}
+    .topbar{
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,20,.45);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar .inner{
+      max-width: var(--max); margin: 0 auto; padding: 12px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap: 12px;
+    }
+    .brand{
+      display:flex; gap:12px; align-items:center;
+    }
+    .monogram{
+      width:38px; height:38px; border-radius: 14px;
+      background: linear-gradient(135deg, rgba(125,211,252,.25), rgba(167,139,250,.25));
+      border:1px solid var(--line);
+      display:grid; place-items:center;
+      font-weight: 800;
+      letter-spacing:.5px;
+    }
+    .brand .t1{font-weight:700}
+    .brand .t2{font-size:12px; color: var(--muted); margin-top:2px}
+    .nav{
+      display:none;
+      gap: 16px; align-items:center; font-size: 13px; color: var(--muted);
+    }
+    .nav a{ text-decoration: none; padding: 8px 10px; border-radius: 12px; }
+    .nav a:hover{ background: rgba(255,255,255,.06); color: var(--ink); }
+    .actions{
+      display:flex; gap: 10px; align-items:center; flex-wrap: wrap;
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap: 9px;
+      padding: 10px 13px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      text-decoration:none;
+      font-size: 13px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.18);
+    }
+    .btn:hover{ transform: translateY(-1px); transition: .2s ease; }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(125,211,252,.22), rgba(167,139,250,.18));
+      border-color: rgba(125,211,252,.25);
+    }
+
+    .hero{
+      padding: 26px 0 14px;
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 18px;
+      align-items: start;
+    }
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      padding: 8px 10px; border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      width: fit-content;
+    }
+    .dot{width:8px;height:8px;border-radius:999px;background: var(--good); box-shadow: 0 0 0 6px rgba(52,211,153,.12);}
+    h1{
+      margin: 14px 0 0;
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+    .sub{
+      margin: 12px 0 0;
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 66ch;
+    }
+    .chips{ margin-top: 16px; display:flex; flex-wrap:wrap; gap: 10px; }
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      padding: 9px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .card{
+      border: 1px solid var(--line);
+      background: rgba(15,26,51,.58);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px;
+    }
+    .card h3{
+      margin: 0;
+      font-size: 14px;
+      letter-spacing: .2px;
+    }
+    .muted{ color: var(--muted); }
+    .metric{
+      display:flex; flex-direction:column; gap:6px;
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+    }
+    .metric .n{
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+    }
+    .metric .l{
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    section{ margin-top: 26px; }
+    .sectionTitle{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin-bottom: 12px;
+    }
+    .sectionTitle h2{
+      margin:0;
+      font-size: 18px;
+      letter-spacing: .2px;
+    }
+    .sectionTitle p{
+      margin:0;
+      color: var(--muted);
+      font-size: 13px;
+      max-width: 70ch;
+      line-height:1.5;
+    }
+
+    .two{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .list{ margin: 10px 0 0; padding: 0; list-style: none; }
+    .list li{
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+      display:flex; gap: 10px; align-items:flex-start;
+      color: var(--ink);
+    }
+    .list li:first-child{ border-top: none; padding-top: 0; }
+    .tick{
+      width: 18px; height: 18px; border-radius: 7px;
+      background: rgba(52,211,153,.14);
+      border: 1px solid rgba(52,211,153,.28);
+      flex: 0 0 18px;
+      margin-top: 2px;
+    }
+
+    .role{
+      display:flex; justify-content:space-between; gap:12px; align-items:flex-start;
+    }
+    .role .left{
+      max-width: 70ch;
+    }
+    .role .title{ font-weight: 800; }
+    .role .meta{ color: var(--muted); font-size: 12px; margin-top: 4px; }
+    .role .when{ color: var(--muted); font-size: 12px; white-space: nowrap; }
+
+    .kbd{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding: 6px 8px;
+      border-radius: 12px;
+      display:inline-block;
+    }
+
+    .footer{
+      margin-top: 34px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      justify-content:space-between;
+    }
+
+    /* Responsive */
+    @media (min-width: 920px){
+      .nav{ display:flex; }
+    }
+    @media (max-width: 920px){
+      .hero{ grid-template-columns: 1fr; }
+      .two{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <div class="brand">
+        <div class="monogram">HA</div>
+        <div>
+          <div class="t1">Higor dos Ramos Aguiar</div>
+          <div class="t2">Legal Counsel Sênior • Gerente Jurídico • São Paulo/SP</div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="#proposta">Proposta</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#cases">Cases</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+      <div class="actions">
+        <a class="btn" href="https://www.linkedin.com/in/adv-higor-aguiar" target="_blank" rel="noreferrer">LinkedIn</a>
+
+        <!-- Troque o # pelo link do currículo PDF -->
+        <a class="btn primary" href="#" target="_blank" rel="noreferrer">Baixar CV (PDF)</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <div class="hero">
+      <div>
+        <div class="kicker"><span class="dot"></span> Perfil executivo • Multinacional • Infraestrutura • Setor público & privado</div>
+
+        <h1>Legal Counsel Sênior e Gerente Jurídico com foco em contratos complexos, licitações e gestão de riscos.</h1>
+
+        <p class="sub">
+          Advogado corporativo com <strong>18+ anos</strong> em ambientes regulados e complexos (engenharia consultiva e infraestrutura),
+          atuando como parceiro estratégico de CFO/CEO e lideranças operacionais, combinando <strong>governança, compliance, performance contratual</strong>
+          e proteção de receita. :contentReference[oaicite:3]{index=3} :contentReference[oaicite:4]{index=4}
+        </p>
+
+        <div class="chips">
+          <span class="chip">Contratos administrativos & privados</span>
+          <span class="chip">Licitações: Lei 14.133/21 • Lei 13.303/16</span>
+          <span class="chip">Claims • Reequilíbrio econômico-financeiro • Matriz de riscos</span>
+          <span class="chip">Tribunais de Contas • MP • Órgãos de controle</span>
+          <span class="chip">M&A • Due Diligence • Integração pós-aquisição</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Impacto (seleção)</h3>
+        <p class="muted" style="margin:8px 0 14px; line-height:1.5;">
+          Resultados reportados em projetos e iniciativas jurídicas corporativas (infraestrutura e licitações).
+        </p>
+
+        <div class="metric">
+          <div class="n">~R$ 8 milhões</div>
+          <div class="l">Recuperação de créditos fiscais (PIS/COFINS – retenção na fonte) e regularidade fiscal. :contentReference[oaicite:5]{index=5}</div>
+        </div>
+
+        <div style="height:10px"></div>
+
+        <div class="metric">
+          <div class="n">~R$ 150 milhões/ano</div>
+          <div class="l">Licitações (OPR/DER-SP) resultando em contratos relevantes e adjudicação formal. :contentReference[oaicite:6]{index=6}</div>
+        </div>
+
+        <div style="height:10px"></div>
+
+        <div class="metric">
+          <div class="n">~R$ 13 milhões/mês</div>
+          <div class="l">Preservação de contratos e receitas na fase de incorporação e integração (Lenc–Egis). :contentReference[oaicite:7]{index=7}</div>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <a class="btn primary" href="#contato">Falar com Higor</a>
+        <div class="muted" style="margin-top:10px; font-size:12px;">
+          Disponível para posições: Legal Counsel Sênior • Gerente Jurídico • Coordenação/gestão jurídica.
+        </div>
+      </div>
+    </div>
+
+    <!-- PROPOSTA -->
+    <section id="proposta">
+      <div class="sectionTitle">
+        <div>
+          <h2>Proposta de valor</h2>
+          <p>Posicionamento “business partner”: traduz risco jurídico em decisão executiva e proteção de receita.</p>
+        </div>
+      </div>
+
+      <div class="two">
+        <div class="card">
+          <h3>Segurança jurídica com visão de negócio</h3>
+          <ul class="list">
+            <li><span class="tick"></span><span>Suporte direto a diretorias operacionais e executivas (CFO, CEO e lideranças), garantindo conformidade regulatória, governança contratual e mitigação de riscos jurídicos e financeiros. :contentReference[oaicite:8]{index=8}</span></li>
+            <li><span class="tick"></span><span>Gestão de contratos complexos: claims, reequilíbrio econômico-financeiro, repactuações, aditivos e estratégia negocial. :contentReference[oaicite:9]{index=9}</span></li>
+            <li><span class="tick"></span><span>Atuação institucional com órgãos de controle (Tribunais de Contas, MP e Judiciário), inclusive PAAR. :contentReference[oaicite:10]{index=10}</span></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>O que diferencia</h3>
+          <ul class="list">
+            <li><span class="tick"></span><span>18+ anos em engenharia para infraestrutura; atuação transversal com áreas técnicas e administrativas; perfil analítico com visão empresarial aplicada à operação. :contentReference[oaicite:11]{index=11}</span></li>
+            <li><span class="tick"></span><span>Licitações públicas desde 2003 (Lei 14.133/21 e 13.303/16): ciclo completo do edital à execução. :contentReference[oaicite:12]{index=12}</span></li>
+            <li><span class="tick"></span><span>Governança, compliance e LGPD: padronização de minutas, políticas e fluxos decisórios para reduzir risco e retrabalho. :contentReference[oaicite:13]{index=13}</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section id="expertise">
+      <div class="sectionTitle">
+        <div>
+          <h2>Expertise (multinacional + C-level)</h2>
+          <p>Palavras-chave alinhadas a ATS/triagem (Gupy/LinkedIn/Indeed). Use também no currículo e no LinkedIn.</p>
+        </div>
+        <div class="kbd">Dica: copie e cole na descrição de vaga para comparar</div>
+      </div>
+
+      <div class="card">
+        <div class="chips" style="margin-top:0">
+          <span class="chip">Legal Counsel</span>
+          <span class="chip">Gerente Jurídico</span>
+          <span class="chip">Contratos complexos</span>
+          <span class="chip">Contratos administrativos</span>
+          <span class="chip">Licitações públicas</span>
+          <span class="chip">Lei 14.133/2021</span>
+          <span class="chip">Lei 13.303/2016</span>
+          <span class="chip">Claims</span>
+          <span class="chip">Reequilíbrio econômico-financeiro</span>
+          <span class="chip">Matriz de riscos</span>
+          <span class="chip">PAAR</span>
+          <span class="chip">Tribunais de Contas</span>
+          <span class="chip">Governança</span>
+          <span class="chip">Compliance</span>
+          <span class="chip">Due Diligence</span>
+          <span class="chip">M&A</span>
+          <span class="chip">Consórcios e SPEs</span>
+          <span class="chip">NDA • MOU • LOI</span>
+          <span class="chip">LGPD</span>
+          <span class="chip">Gestão de contingências</span>
+        </div>
+
+        <p class="muted" style="margin:14px 0 0; line-height:1.6">
+          Experiência prática em contratos nacionais e internacionais, com interface com concessionárias, agências reguladoras e órgãos fiscalizadores, além de parcerias, consórcios, SPEs e instrumentos preliminares (NDA/MOU/LOI). :contentReference[oaicite:14]{index=14}
+        </p>
+      </div>
+    </section>
+
+    <!-- CASES -->
+    <section id="cases">
+      <div class="sectionTitle">
+        <div>
+          <h2>Cases (Contexto → Decisão → Impacto)</h2>
+          <p>Formato pensado para recrutadores e diretoria: objetivo, mensurável e orientado a risco/receita.</p>
+        </div>
+      </div>
+
+      <div class="two">
+        <div class="card">
+          <h3>Créditos fiscais e regularidade</h3>
+          <p class="muted" style="margin:8px 0 10px; line-height:1.6">
+            Atuação estratégica na recuperação de créditos fiscais por retificação de obrigações acessórias e suporte às áreas fiscal/contábil/financeira.
+          </p>
+          <ul class="list">
+            <li><span class="tick"></span><span><strong>Decisão:</strong> condução técnica do processo de apuração/recuperação (PIS/COFINS – retenção na fonte). :contentReference[oaicite:15]{index=15}</span></li>
+            <li><span class="tick"></span><span><strong>Impacto:</strong> retorno financeiro em torno de <strong>R$ 8 milhões</strong> e manutenção da regularidade fiscal. :contentReference[oaicite:16]{index=16}</span></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Licitações e contratos de grande porte</h3>
+          <p class="muted" style="margin:8px 0 10px; line-height:1.6">
+            Atuação no ciclo completo licitatório (editais, matriz de riscos, recursos, diligências, homologação e adjudicação).
+          </p>
+          <ul class="list">
+            <li><span class="tick"></span><span><strong>Decisão:</strong> gestão do processo licitatório com base na Lei 14.133/21 e 13.303/16. :contentReference[oaicite:17]{index=17}</span></li>
+            <li><span class="tick"></span><span><strong>Impacto:</strong> contratos adjudicados/formalizados na ordem de <strong>R$ 150 milhões/ano</strong>. :contentReference[oaicite:18]{index=18}</span></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Integração e preservação de receitas (M&A)</h3>
+          <p class="muted" style="margin:8px 0 10px; line-height:1.6">
+            Suporte jurídico na incorporação e integração (Lenc–Egis), garantindo continuidade operacional e alinhamento regulatório.
+          </p>
+          <ul class="list">
+            <li><span class="tick"></span><span><strong>Decisão:</strong> identificação de contratos, aditivos e atualização cadastral, assegurando continuidade. :contentReference[oaicite:19]{index=19}</span></li>
+            <li><span class="tick"></span><span><strong>Impacto:</strong> preservação de contratos com receita mensal aproximada de <strong>R$ 13 milhões</strong>. :contentReference[oaicite:20]{index=20}</span></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Governança + Procurement</h3>
+          <p class="muted" style="margin:8px 0 10px; line-height:1.6">
+            Estruturação de minutas e fluxos contratuais para fortalecer governança, compliance e integridade.
+          </p>
+          <ul class="list">
+            <li><span class="tick"></span><span><strong>Decisão:</strong> padronização de instrumentos e controles (LGPD, integridade e políticas). :contentReference[oaicite:21]{index=21}</span></li>
+            <li><span class="tick"></span><span><strong>Impacto:</strong> redução de riscos e melhoria de previsibilidade nas negociações e execução. :contentReference[oaicite:22]{index=22}</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section id="experiencia">
+      <div class="sectionTitle">
+        <div>
+          <h2>Experiência</h2>
+          <p>Resumo “scanner-friendly” (estilo executivo). Para detalhar, use o CV em PDF.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="role">
+          <div class="left">
+            <div class="title">Legal Counsel Regional Sênior / Advogado Corporativo Sênior — Egis (Multinacional)</div>
+            <div class="meta">Infraestrutura • Setor público & privado • Contratos complexos • Governança & riscos</div>
+          </div>
+          <div class="when">jan/2015 – dez/2025</div>
+        </div>
+        <ul class="list" style="margin-top:12px">
+          <li><span class="tick"></span><span>Suporte a diretorias operacionais e executivas (incl. CFO/CEO), com foco em conformidade regulatória e mitigação de riscos jurídicos/financeiros. :contentReference[oaicite:23]{index=23}</span></li>
+          <li><span class="tick"></span><span>Gestão de contratos complexos (públicos e privados): claims, reequilíbrios, repactuações, aditivos e estratégia negocial. :contentReference[oaicite:24]{index=24}</span></li>
+          <li><span class="tick"></span><span>Interface institucional com Tribunais de Contas, Ministério Público e Judiciário, inclusive PAAR. :contentReference[oaicite:25]{index=25}</span></li>
+        </ul>
+      </div>
+
+      <div style="height:14px"></div>
+
+      <div class="two">
+        <div class="card">
+          <div class="role">
+            <div class="left">
+              <div class="title">Assessor Jurídico Sênior / Analista de Licitações Sênior — Lenc</div>
+              <div class="meta">Licitações • Contratos públicos • Mitigação de riscos • Negociação</div>
+            </div>
+            <div class="when">mai/2007 – dez/2014</div>
+          </div>
+          <ul class="list" style="margin-top:12px">
+            <li><span class="tick"></span><span>Atuação no ciclo completo de licitações públicas e execução/encerramento de contratos administrativos. :contentReference[oaicite:26]{index=26}</span></li>
+            <li><span class="tick"></span><span>Elaboração e negociação de contratos com clientes, fornecedores e parceiros. :contentReference[oaicite:27]{index=27}</span></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="role">
+            <div class="left">
+              <div class="title">Advogado Consultor — Departamento Hidroviário (SP)</div>
+              <div class="meta">Hidrovia Tietê-Paraná • Comitês de licitação • Interface TCE/TJ</div>
+            </div>
+            <div class="when">jun/2012 – dez/2020</div>
+          </div>
+          <ul class="list" style="margin-top:12px">
+            <li><span class="tick"></span><span>Assessoria a comissões julgadoras; análise de propostas, diligências e homologação/adjudicação. :contentReference[oaicite:28]{index=28}</span></li>
+            <li><span class="tick"></span><span>Experiência comprovada por Atestados Técnicos (DH-041/2020 e DH-042/2021). :contentReference[oaicite:29]{index=29}</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <div class="sectionTitle">
+        <div>
+          <h2>Contato</h2>
+          <p>Para posições de Legal Counsel Sênior / Gerente Jurídico (infraestrutura, concessões, engenharia, setores regulados e multinacionais).</p>
+        </div>
+      </div>
+
+      <div class="two">
+        <div class="card">
+          <h3>Fale diretamente</h3>
+          <ul class="list">
+            <li><span class="tick"></span><span><strong>E-mail:</strong> <a href="mailto:aguiar.higor@gmail.com">aguiar.higor@gmail.com</a></span></li>
+            <li><span class="tick"></span><span><strong>Telefone:</strong> <a href="tel:+5511988610446">+55 (11) 98861-0446</a></span></li>
+            <li><span class="tick"></span><span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adv-higor-aguiar" target="_blank" rel="noreferrer">linkedin.com/in/adv-higor-aguiar</a></span></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Mensagem pronta para recrutadores</h3>
+          <p class="muted" style="line-height:1.7; margin-top:8px;">
+            “Olá! Sou Legal Counsel Sênior com 18+ anos em infraestrutura e contratos complexos (público e privado), forte atuação em licitações (Lei 14.133/21 e 13.303/16),
+            governança e gestão de riscos. Tenho experiência com claims e reequilíbrio econômico-financeiro, interface com órgãos de controle e suporte direto a C-level.
+            Posso compartilhar meu CV executivo e cases relevantes para a posição.” :contentReference[oaicite:30]{index=30}
+          </p>
+
+          <!-- Troque o # pelo link do currículo PDF -->
+          <a class="btn primary" href="#" target="_blank" rel="noreferrer" style="margin-top:10px;">Baixar CV (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Higor dos Ramos Aguiar • Portfólio executivo</div>
+      <div class="muted">SEO/ATS: palavras-chave e estrutura para triagem e busca</div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
