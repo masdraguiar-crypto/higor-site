@@ -3,30 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Higor Aguiar | Legal Counsel Sênior • Gerente Jurídico</title>
-  <meta name="description" content="Legal Counsel Sênior e Gerente Jurídico. Contratos complexos, licitações públicas, compliance, governança e gestão de riscos." />
+  <title>Higor Aguiar | Senior Legal Counsel • Gerente Jurídico</title>
+  <meta name="description" content="Portfólio executivo: contratos complexos, licitações, compliance, governança e gestão de riscos. Business Partner para decisões C-level." />
   <meta name="theme-color" content="#0b1220" />
 
-  <!-- Fonts (executivo) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg: #f6f7f9;
-      --panel: #ffffff;
-      --ink: #0b1220;
-      --muted: #4b5563;
+      --navy:#0b1220;
+      --ink:#0b1220;
+      --muted:#475569;
+      --bg:#f6f7f9;
+      --panel:#ffffff;
       --line: rgba(15, 23, 42, .12);
+      --softLine: rgba(15, 23, 42, .08);
       --shadow: 0 18px 45px rgba(2, 6, 23, .10);
       --shadow2: 0 10px 24px rgba(2, 6, 23, .08);
-      --radius: 18px;
+      --radius:18px;
 
-      --accent: #0b1220;
-      --accent2:#0f766e;
-      --accentSoft: rgba(15,118,110,.10);
+      --accent:#0f766e;
+      --accentSoft: rgba(15,118,110,.12);
 
+      --gold:#c7a76c; /* detalhe metálico discreto */
       --max: 1120px;
     }
 
@@ -37,18 +38,18 @@
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(900px 520px at 14% 8%, rgba(15,118,110,.10), transparent 60%),
-        radial-gradient(800px 460px at 90% 10%, rgba(2,6,23,.07), transparent 55%),
-        linear-gradient(180deg, #f7f8fb 0%, #f3f4f6 55%, #f7f8fb 100%);
+        radial-gradient(980px 560px at 20% 8%, rgba(15,118,110,.10), transparent 60%),
+        radial-gradient(900px 520px at 90% 12%, rgba(11,18,32,.08), transparent 55%),
+        linear-gradient(180deg, #f8fafc 0%, #f3f4f6 55%, #f8fafc 100%);
     }
 
     a{ color: inherit; }
-    .wrap{ max-width: var(--max); margin:0 auto; padding: 22px 18px 70px; }
+    .wrap{ max-width: var(--max); margin:0 auto; padding: 22px 18px 74px; }
 
     /* Topbar */
     .topbar{
       position: sticky; top: 0; z-index: 50;
-      background: rgba(246,247,249,.78);
+      background: rgba(248,250,252,.78);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
     }
@@ -61,10 +62,13 @@
       justify-content:space-between;
       gap: 12px;
     }
-    .brand{ display:flex; align-items:center; gap: 12px; min-width: 250px; }
+    .brand{ display:flex; align-items:center; gap: 12px; min-width: 260px; }
     .mark{
       width:40px; height:40px; border-radius: 14px;
-      background: linear-gradient(135deg, rgba(11,18,32,.10), rgba(15,118,110,.12));
+      background:
+        radial-gradient(18px 18px at 30% 30%, rgba(15,118,110,.18), transparent 60%),
+        radial-gradient(20px 20px at 70% 70%, rgba(11,18,32,.12), transparent 60%),
+        rgba(255,255,255,.85);
       border: 1px solid var(--line);
       display:grid; place-items:center;
       font-weight: 700;
@@ -82,10 +86,7 @@
       padding: 8px 10px;
       border-radius: 999px;
     }
-    nav a:hover{
-      background: rgba(2,6,23,.06);
-      color: var(--ink);
-    }
+    nav a:hover{ background: rgba(2,6,23,.06); color: var(--ink); }
 
     .actions{ display:flex; gap: 10px; align-items:center; flex-wrap:wrap; }
     .btn{
@@ -94,7 +95,7 @@
       padding: 10px 13px;
       border-radius: 999px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,.85);
+      background: rgba(255,255,255,.86);
       box-shadow: 0 8px 20px rgba(2,6,23,.08);
       text-decoration:none;
       font-size: 13px;
@@ -106,32 +107,57 @@
     .btn.primary{
       background: linear-gradient(135deg, rgba(11,18,32,.92), rgba(11,18,32,.92));
       color: #fff;
-      border-color: rgba(11,18,32,.22);
+      border-color: rgba(11,18,32,.18);
       box-shadow: 0 16px 32px rgba(2,6,23,.18);
     }
-    .btn.primary:hover{ transform: translateY(-1px); box-shadow: 0 18px 38px rgba(2,6,23,.22); }
+    .btn.primary:hover{ box-shadow: 0 18px 38px rgba(2,6,23,.22); }
 
-    /* Hero */
+    /* Hero claro premium */
+    .heroShell{
+      border: 1px solid var(--softLine);
+      border-radius: 26px;
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      background:
+        radial-gradient(700px 360px at 15% 18%, rgba(15,118,110,.10), transparent 60%),
+        radial-gradient(760px 420px at 88% 22%, rgba(11,18,32,.07), transparent 58%),
+        linear-gradient(180deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,.72) 100%);
+      position: relative;
+    }
+    /* textura/grid sutil */
+    .heroShell:before{
+      content:"";
+      position:absolute; inset:0;
+      background-image:
+        linear-gradient(to right, rgba(15,23,42,.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15,23,42,.06) 1px, transparent 1px);
+      background-size: 44px 44px;
+      opacity: .18;
+      pointer-events:none;
+      mask-image: radial-gradient(500px 260px at 25% 18%, black 0%, transparent 60%);
+    }
+
     .hero{
-      padding: 34px 0 10px;
+      padding: 28px 22px 18px;
       display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap: 18px;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
       align-items: start;
+      position: relative;
     }
     .kicker{
       display:inline-flex; align-items:center; gap: 10px;
       font-size: 12px;
       color: var(--muted);
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.72);
+      border: 1px solid var(--softLine);
+      background: rgba(255,255,255,.70);
       padding: 8px 12px;
       border-radius: 999px;
       width: fit-content;
     }
     .dot{
       width: 8px; height:8px; border-radius: 999px;
-      background: var(--accent2);
+      background: var(--accent);
       box-shadow: 0 0 0 6px var(--accentSoft);
     }
     h1{
@@ -153,17 +179,23 @@
     .chip{
       font-size: 12px;
       color: var(--muted);
-      background: rgba(255,255,255,.75);
-      border: 1px solid var(--line);
+      background: rgba(255,255,255,.72);
+      border: 1px solid var(--softLine);
       padding: 9px 12px;
       border-radius: 999px;
     }
+    .dividerGold{
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(199,167,108,.55), transparent);
+      margin: 14px 0 0;
+      opacity: .9;
+    }
 
     .card{
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.88);
+      border: 1px solid var(--softLine);
+      background: rgba(255,255,255,.86);
       border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow2);
       padding: 16px;
     }
 
@@ -171,20 +203,20 @@
     .profile{
       display:flex; gap: 14px; align-items:center;
       padding: 14px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
+      border: 1px solid var(--softLine);
+      border-radius: 18px;
       background: rgba(255,255,255,.70);
     }
     .avatar{
-      width: 84px; height: 84px;
+      width: 90px; height: 110px;
       border-radius: 18px;
-      border: 1px solid var(--line);
+      border: 1px solid var(--softLine);
+      overflow:hidden;
+      flex: 0 0 90px;
       background:
         radial-gradient(40px 40px at 30% 25%, rgba(15,118,110,.18), transparent 60%),
-        radial-gradient(42px 42px at 70% 70%, rgba(2,6,23,.10), transparent 60%),
+        radial-gradient(42px 42px at 70% 70%, rgba(11,18,32,.10), transparent 60%),
         rgba(255,255,255,.70);
-      overflow:hidden;
-      flex: 0 0 84px;
       display:grid; place-items:center;
       color: var(--muted);
       font-size: 12px;
@@ -194,18 +226,38 @@
     .p1{ font-weight: 700; }
     .p2{ margin-top: 4px; font-size: 12px; color: var(--muted); line-height: 1.4; }
 
-    .metrics{ margin-top: 12px; display:grid; gap: 10px; }
-    .metric{
-      padding: 12px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.70);
-      box-shadow: var(--shadow2);
+    /* Metrics banner */
+    .metricsBanner{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      padding: 14px 22px 22px;
     }
-    .metric .n{ font-weight: 700; letter-spacing: -.2px; }
-    .metric .l{ margin-top: 6px; font-size: 12px; color: var(--muted); line-height: 1.5; }
+    .metric{
+      border: 1px solid var(--softLine);
+      background: rgba(255,255,255,.72);
+      border-radius: 18px;
+      padding: 14px;
+      box-shadow: 0 10px 20px rgba(2,6,23,.06);
+    }
+    .metric .big{
+      font-weight: 800;
+      letter-spacing: -.3px;
+      font-size: 18px;
+      display:flex; align-items:baseline; gap: 8px;
+    }
+    .metric .big .tag{
+      font-size: 11px;
+      color: var(--gold);
+      border: 1px solid rgba(199,167,108,.35);
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(199,167,108,.10);
+      font-weight: 700;
+    }
+    .metric .small{ margin-top: 8px; font-size: 12px; color: var(--muted); line-height: 1.45; }
 
-    section{ margin-top: 30px; }
+    section{ margin-top: 28px; }
     .sectionTitle{
       display:flex; align-items:flex-end; justify-content:space-between; gap: 14px;
       margin-bottom: 12px;
@@ -227,25 +279,93 @@
 
     .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
-    .list{ margin: 10px 0 0; padding:0; list-style:none; }
-    .list li{
-      display:flex; gap: 10px; align-items:flex-start;
-      padding: 10px 0;
-      border-top: 1px solid rgba(15,23,42,.08);
+    /* Tags com ícones */
+    .pillGrid{
+      display:flex; flex-wrap:wrap; gap: 10px;
+      margin-top: 8px;
     }
-    .list li:first-child{ border-top:none; padding-top: 0; }
-    .tick{
-      width: 18px; height: 18px; border-radius: 7px;
-      background: rgba(15,118,110,.14);
-      border: 1px solid rgba(15,118,110,.22);
-      flex: 0 0 18px;
-      margin-top: 2px;
+    .pill{
+      display:inline-flex; gap: 8px; align-items:center;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--softLine);
+      background: rgba(255,255,255,.74);
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
     }
+    .ico{ width:16px; height:16px; display:inline-block; }
+    .ico svg{ width:16px; height:16px; stroke: var(--navy); opacity: .78; }
 
+    /* Cases + accordion */
     .cases{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .case h3{ margin:0; font-size: 14px; }
     .case p{ margin: 8px 0 0; font-size: 13px; line-height: 1.65; color: var(--muted); }
+    details{
+      margin-top: 10px;
+      border-top: 1px solid rgba(15,23,42,.08);
+      padding-top: 10px;
+    }
+    summary{
+      cursor:pointer;
+      list-style:none;
+      font-size: 13px;
+      color: var(--navy);
+      font-weight: 600;
+      display:flex; align-items:center; justify-content:space-between;
+      gap: 10px;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    .chev{
+      width: 10px; height: 10px;
+      border-right: 2px solid rgba(11,18,32,.60);
+      border-bottom: 2px solid rgba(11,18,32,.60);
+      transform: rotate(45deg);
+      transition: transform .18s ease;
+      opacity:.9;
+    }
+    details[open] .chev{ transform: rotate(225deg); }
 
+    /* Experiência em trilhas */
+    .tracks{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .trackTitle{
+      display:flex; align-items:center; justify-content:space-between; gap: 10px;
+      margin-bottom: 10px;
+    }
+    .trackTitle .t{ font-weight: 800; }
+    .badge{
+      font-size: 11px;
+      border: 1px solid rgba(11,18,32,.16);
+      padding: 5px 9px;
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255,255,255,.70);
+      white-space:nowrap;
+    }
+    .job{
+      padding: 12px 0;
+      border-top: 1px solid rgba(15,23,42,.08);
+    }
+    .job:first-child{ border-top:none; padding-top: 0; }
+    .job .h{ font-weight: 700; font-size: 13px; }
+    .job .m{ margin-top: 5px; font-size: 12px; color: var(--muted); line-height: 1.5; }
+    .job .d{ margin-top: 6px; font-size: 12px; color: var(--muted); }
+
+    /* Contato */
+    .copyBox{
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: 16px;
+      border: 1px solid var(--softLine);
+      background: rgba(255,255,255,.70);
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 13px;
+    }
     .footer{
       margin-top: 34px;
       padding-top: 18px;
@@ -258,6 +378,21 @@
       justify-content:space-between;
     }
 
+    /* Floating CTA */
+    .floatCta{
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 80;
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .floatCta .btn{ box-shadow: 0 18px 38px rgba(2,6,23,.18); }
+    .btn.whats{
+      background: rgba(255,255,255,.92);
+    }
+
     /* Animations */
     .reveal{
       opacity: 0;
@@ -265,23 +400,19 @@
       transition: opacity .7s ease, transform .7s ease;
       will-change: opacity, transform;
     }
-    .reveal.in{
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal.in{ opacity: 1; transform: translateY(0); }
 
     @media (prefers-reduced-motion: reduce){
       html{ scroll-behavior:auto; }
       .reveal{ transition:none !important; transform:none !important; opacity:1 !important; }
-      .btn{ transition:none !important; }
+      .btn, details, summary{ transition:none !important; }
     }
-
-    @media (min-width: 980px){
-      nav{ display:flex; }
-    }
+    @media (min-width: 980px){ nav{ display:flex; } }
     @media (max-width: 980px){
       .hero{ grid-template-columns: 1fr; }
-      .grid2, .cases{ grid-template-columns: 1fr; }
+      .metricsBanner{ grid-template-columns: 1fr; }
+      .grid2, .cases, .tracks{ grid-template-columns: 1fr; }
+      .floatCta{ right: 12px; bottom: 12px; }
     }
   </style>
 </head>
@@ -294,14 +425,15 @@
         <div class="mark">HA</div>
         <div>
           <div class="name">Higor Aguiar</div>
-          <div class="role">Legal Counsel Sênior • Gerente Jurídico</div>
+          <div class="role">Senior Legal Counsel • Gerente Jurídico</div>
         </div>
       </div>
 
       <nav>
         <a href="#proposta">Proposta</a>
-        <a href="#expertise">Expertise</a>
+        <a href="#metricas">Impacto</a>
         <a href="#cases">Cases</a>
+        <a href="#expertise">Competências</a>
         <a href="#experiencia">Experiência</a>
         <a href="#contato">Contato</a>
       </nav>
@@ -309,65 +441,78 @@
       <div class="actions">
         <a class="btn" href="https://www.linkedin.com/in/adv-higor-aguiar" target="_blank" rel="noreferrer">LinkedIn</a>
 
-        <!-- TROQUE o # pelo link do CV em PDF -->
-        <a class="btn primary" href="#" target="_blank" rel="noreferrer">Baixar CV (PDF)</a>
+        <!-- TROQUE o href pelo link do seu CV PDF (pode ser /cv-higor.pdf no repositório) -->
+        <a class="btn primary" id="cvTop" href="#" target="_blank" rel="noreferrer">Baixar CV (PDF)</a>
       </div>
     </div>
   </div>
 
   <main class="wrap">
-    <!-- HERO -->
-    <div class="hero">
-      <div class="reveal">
-        <div class="kicker"><span class="dot"></span> Perfil executivo • Multinacional • Contratos & Licitações • Governança & Riscos</div>
+    <!-- HERO CLARO PREMIUM -->
+    <div class="heroShell reveal">
+      <div class="hero">
+        <div>
+          <div class="kicker"><span class="dot"></span> Business Partner para decisões C-level • Contratos • Licitações • Governança</div>
 
-        <h1>Assessoria jurídica estratégica para decisões executivas, com governança e previsibilidade.</h1>
+          <h1>Segurança jurídica e previsibilidade financeira para contratos complexos e ambientes regulados.</h1>
 
-        <p class="sub">
-          Atuação em contratos complexos, licitações públicas, compliance e gestão de riscos,
-          conectando jurídico e negócio para suportar liderança e proteger resultados.
-        </p>
+          <p class="sub">
+            Atuação executiva conectando Jurídico e Diretoria para mitigar riscos, sustentar continuidade operacional e
+            proteger receitas em projetos de infraestrutura e grandes operações.
+          </p>
 
-        <div class="chips">
-          <span class="chip">Contratos complexos</span>
-          <span class="chip">Licitações (Lei 14.133/21 • 13.303/16)</span>
-          <span class="chip">Claims • Reequilíbrio • Matriz de riscos</span>
-          <span class="chip">Governança • Compliance</span>
+          <div class="dividerGold"></div>
+
+          <div class="chips">
+            <span class="chip">Contratos complexos & administrativos</span>
+            <span class="chip">Licitações (Lei 14.133/21 • 13.303/16)</span>
+            <span class="chip">Claims • Reequilíbrio econômico-financeiro</span>
+            <span class="chip">Governança • Compliance • LGPD</span>
+          </div>
+
+          <div style="display:flex; gap:10px; margin-top:18px; flex-wrap:wrap">
+            <a class="btn primary" href="#cases">Ver Cases de Sucesso</a>
+            <a class="btn" href="#contato">Contato</a>
+          </div>
         </div>
 
-        <div style="display:flex; gap:10px; margin-top:18px; flex-wrap:wrap">
-          <a class="btn primary" href="#contato">Contato</a>
-          <a class="btn" href="#cases">Ver cases</a>
+        <div class="card">
+          <div class="profile">
+            <div class="avatar">
+              <!-- RECOMENDADO: suba a foto como "foto.jpg" no repositório e descomente:
+              <img src="foto.jpg" alt="Higor Aguiar" />
+              -->
+              Foto
+            </div>
+            <div>
+              <div class="p1">Executive Portfolio</div>
+              <div class="p2">Legal Counsel Sênior • Gerente Jurídico<br/>Infraestrutura • Governança • Risco</div>
+              <div style="margin-top:10px; font-size:12px; color:var(--muted); line-height:1.5;">
+                Perfil otimizado para recrutamento e triagem: clareza, impacto e leitura rápida.
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn" href="#metricas">Ver métricas</a>
+            <a class="btn" href="#expertise">Competências</a>
+          </div>
         </div>
       </div>
 
-      <div class="card reveal">
-        <div class="profile">
-          <div class="avatar">
-            <!-- OPÇÃO 1 (recomendado): envie a foto para o GitHub como "foto.jpg" e use:
-                 <img src="foto.jpg" alt="Higor Aguiar" />
-            -->
-            Foto
-          </div>
-          <div>
-            <div class="p1">Legal Counsel Sênior • Gerente Jurídico</div>
-            <div class="p2">Contratos • Licitações • Governança • Risco • Compliance</div>
-          </div>
+      <!-- METRICS BANNER -->
+      <div id="metricas" class="metricsBanner">
+        <div class="metric">
+          <div class="big">~R$ 150 milhões/ano <span class="tag">Governança</span></div>
+          <div class="small">Gestão e governança de contratos de infraestrutura com alto impacto financeiro.</div>
         </div>
-
-        <div class="metrics">
-          <div class="metric">
-            <div class="n">Contratos e risco</div>
-            <div class="l">Governança contratual, mitigação de risco regulatório e suporte à execução com previsibilidade.</div>
-          </div>
-          <div class="metric">
-            <div class="n">Interface institucional</div>
-            <div class="l">Atuação com stakeholders internos e externos, fortalecendo conformidade e segurança jurídica.</div>
-          </div>
-          <div class="metric">
-            <div class="n">Liderança e decisão</div>
-            <div class="l">Tradução do risco jurídico em decisão executiva para alta liderança e áreas de negócio.</div>
-          </div>
+        <div class="metric">
+          <div class="big">~R$ 13 milhões/mês <span class="tag">Receita</span></div>
+          <div class="small">Preservação de receitas e continuidade operacional em cenários críticos e integrações.</div>
+        </div>
+        <div class="metric">
+          <div class="big">~R$ 8 milhões <span class="tag">Eficiência</span></div>
+          <div class="small">Recuperação de créditos/eficiência fiscal com conformidade e regularidade normativa.</div>
         </div>
       </div>
     </div>
@@ -376,56 +521,26 @@
     <section id="proposta" class="reveal">
       <div class="sectionTitle">
         <div>
-          <h2>Proposta de valor</h2>
-          <p>Posicionamento executivo: reduzir risco, elevar previsibilidade e apoiar decisões estratégicas.</p>
+          <h2>Diferenciais como Business Partner</h2>
+          <p>Tradução do risco jurídico em decisão executiva, com governança e previsibilidade para a operação.</p>
         </div>
       </div>
 
       <div class="grid2">
         <div class="card">
-          <h3 style="margin:0; font-size:14px">Negociação e execução com governança</h3>
-          <ul class="list">
-            <li><span class="tick"></span><span>Estruturação e negociação de contratos complexos com foco em execução e performance.</span></li>
-            <li><span class="tick"></span><span>Gestão de riscos, conformidade e governança documental para reduzir exposição.</span></li>
-            <li><span class="tick"></span><span>Atuação como business partner de diretorias e liderança.</span></li>
-          </ul>
+          <h3 style="margin:0; font-size:14px;">Decisão executiva com base em risco (e não em “juridiquês”)</h3>
+          <p style="margin:10px 0 0; color:var(--muted); line-height:1.75; font-size:13px;">
+            Atua como elo entre Jurídico e Diretoria: estrutura cenários, consequências, alavancas de negociação e
+            controles de governança para decisões rápidas e defensáveis.
+          </p>
         </div>
 
         <div class="card">
-          <h3 style="margin:0; font-size:14px">Setor público e ambiente regulado</h3>
-          <ul class="list">
-            <li><span class="tick"></span><span>Licitações e contratos administrativos (Lei 14.133/21 e 13.303/16).</span></li>
-            <li><span class="tick"></span><span>Claims, reequilíbrio econômico-financeiro e matriz de riscos.</span></li>
-            <li><span class="tick"></span><span>Interface institucional e suporte em auditorias/órgãos de controle.</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERTISE -->
-    <section id="expertise" class="reveal">
-      <div class="sectionTitle">
-        <div>
-          <h2>Expertise</h2>
-          <p>Palavras-chave para reforço de posicionamento (também ajuda em triagens/ATS).</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="chips" style="margin-top:0">
-          <span class="chip">Legal Counsel</span>
-          <span class="chip">Gerente Jurídico</span>
-          <span class="chip">Contratos complexos</span>
-          <span class="chip">Contratos administrativos</span>
-          <span class="chip">Licitações públicas</span>
-          <span class="chip">Lei 14.133/2021</span>
-          <span class="chip">Lei 13.303/2016</span>
-          <span class="chip">Claims</span>
-          <span class="chip">Reequilíbrio econômico-financeiro</span>
-          <span class="chip">Matriz de riscos</span>
-          <span class="chip">Governança</span>
-          <span class="chip">Compliance</span>
-          <span class="chip">LGPD</span>
+          <h3 style="margin:0; font-size:14px;">Licitações e segurança financeira empresarial</h3>
+          <p style="margin:10px 0 0; color:var(--muted); line-height:1.75; font-size:13px;">
+            Experiência no ciclo licitatório reduz risco de desclassificação, glosa e contingências, reforça conformidade
+            e protege margens através de cláusulas, matriz de riscos e estratégia de recursos/impugnações.
+          </p>
         </div>
       </div>
     </section>
@@ -434,52 +549,157 @@
     <section id="cases" class="reveal">
       <div class="sectionTitle">
         <div>
-          <h2>Cases</h2>
-          <p>Formato “Contexto → Ação → Resultado” para leitura executiva rápida.</p>
+          <h2>Cases de Sucesso</h2>
+          <p>Formato “Contexto → Decisão → Impacto” (scanner-friendly). Clique em “Ver detalhes”.</p>
         </div>
       </div>
 
       <div class="cases">
         <div class="card case">
-          <h3>Contratos e governança</h3>
-          <p><strong>Contexto:</strong> contratos com alto impacto financeiro e risco regulatório.</p>
-          <p><strong>Ação:</strong> governança contratual, revisão de cláusulas críticas e mitigação de riscos.</p>
-          <p><strong>Resultado:</strong> maior previsibilidade na execução e redução de exposição.</p>
+          <h3>Licitações e contratos de grande porte</h3>
+          <p><strong>Contexto:</strong> disputas e riscos em processos licitatórios e contratos administrativos.</p>
+          <p><strong>Decisão:</strong> estratégia jurídica para recursos, governança documental e cláusulas críticas.</p>
+          <p><strong>Impacto:</strong> redução de exposição e aumento de previsibilidade financeira.</p>
+          <details>
+            <summary>Ver detalhes <span class="chev"></span></summary>
+            <p>Inclua aqui 3 bullets curtos (ex.: “matriz de riscos”, “garantias”, “reajuste/revisão”, “compliance”).</p>
+          </details>
         </div>
 
         <div class="card case">
-          <h3>Licitações públicas</h3>
-          <p><strong>Contexto:</strong> processos licitatórios e contratos administrativos.</p>
-          <p><strong>Ação:</strong> suporte no ciclo (edital, recursos, diligências, contratos e aditivos).</p>
-          <p><strong>Resultado:</strong> conformidade, segurança jurídica e melhor governança.</p>
+          <h3>Integração e continuidade operacional</h3>
+          <p><strong>Contexto:</strong> mudanças organizacionais e riscos de interrupção contratual/regulatória.</p>
+          <p><strong>Decisão:</strong> plano jurídico de transição, controles e renegociação de cláusulas sensíveis.</p>
+          <p><strong>Impacto:</strong> preservação de receitas e estabilidade da operação.</p>
+          <details>
+            <summary>Ver detalhes <span class="chev"></span></summary>
+            <p>Inclua aqui bullets com “controles”, “cadências de comitê”, “aprovações”, “pontos de risco”.</p>
+          </details>
+        </div>
+
+        <div class="card case">
+          <h3>Reequilíbrio econômico-financeiro (claims)</h3>
+          <p><strong>Contexto:</strong> mudanças de escopo, prazos e eventos externos gerando desequilíbrio.</p>
+          <p><strong>Decisão:</strong> estruturação de pleitos com evidências, matriz de riscos e tese jurídica.</p>
+          <p><strong>Impacto:</strong> recuperação de valores e mitigação de perdas contratuais.</p>
+          <details>
+            <summary>Ver detalhes <span class="chev"></span></summary>
+            <p>Use bullets sobre “documentos de suporte”, “nexo causal”, “quantificação”, “negociação”.</p>
+          </details>
+        </div>
+
+        <div class="card case">
+          <h3>Eficiência fiscal e regularidade</h3>
+          <p><strong>Contexto:</strong> oportunidades de recuperação e mitigação de risco tributário.</p>
+          <p><strong>Decisão:</strong> revisão técnica, conformidade e governança para execução segura.</p>
+          <p><strong>Impacto:</strong> melhoria financeira com compliance e rastreabilidade.</p>
+          <details>
+            <summary>Ver detalhes <span class="chev"></span></summary>
+            <p>Bullets sobre “regularidade”, “compliance”, “governança”, “auditoria/lastro documental”.</p>
+          </details>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIÊNCIA -->
-    <section id="experiencia" class="reveal">
+    <!-- COMPETÊNCIAS / ATS -->
+    <section id="expertise" class="reveal">
       <div class="sectionTitle">
         <div>
-          <h2>Experiência</h2>
-          <p>Resumo objetivo. Detalhes completos no CV em PDF.</p>
+          <h2>Competências-chave (ATS + leitura executiva)</h2>
+          <p>Pílulas com ícones minimalistas para “escaneamento” rápido.</p>
         </div>
       </div>
 
       <div class="card">
-        <div style="display:flex; justify-content:space-between; gap:12px; border-bottom:1px solid rgba(15,23,42,.08); padding-bottom:10px; margin-bottom:10px;">
-          <div>
-            <div style="font-weight:700;">Legal Counsel Sênior / Jurídico Corporativo — Multinacional</div>
-            <div style="color:var(--muted); font-size:12px; margin-top:4px; line-height:1.45;">Contratos complexos • Licitações • Governança • Compliance</div>
+        <div class="pillGrid">
+          <!-- Ícones inline (line icons) -->
+          <span class="pill"><span class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M10 6h4"/><path d="M8 6a4 4 0 0 1 8 0v2H8V6Z"/><path d="M6 8h12v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8Z"/></svg>
+          </span>Legal Counsel / Gerente Jurídico</span>
+
+          <span class="pill"><span class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 3h10v18H7z"/><path d="M9 7h6"/><path d="M9 11h6"/><path d="M9 15h4"/></svg>
+          </span>Contratos complexos</span>
+
+          <span class="pill"><span class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 21h18"/><path d="M6 21V7l6-4 6 4v14"/><path d="M9 21v-8h6v8"/></svg>
+          </span>Licitações • Lei 14.133/21 • 13.303/16</span>
+
+          <span class="pill"><span class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3l8 4v6c0 5-3 9-8 9s-8-4-8-9V7l8-4Z"/><path d="M9 12l2 2 4-5"/></svg>
+          </span>Governança • Compliance</span>
+
+          <span class="pill"><span class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l3 3"/></svg>
+          </span>Matriz de riscos • Contingências</span>
+
+          <span class="pill"><span class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3v18"/><path d="M7 7h10"/><path d="M6 21h12"/><path d="M8 7c0 6-2 8-2 8h12s-2-2-2-8"/></svg>
+          </span>Claims • Reequilíbrio econômico-financeiro</span>
+
+          <span class="pill"><span class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M10 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/><path d="M14 3h7v7"/><path d="M21 3l-9 9"/></svg>
+          </span>Due Diligence</span>
+
+          <span class="pill"><span class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M16 8a6 6 0 1 1-8 0"/><path d="M12 14v7"/><path d="M8 21h8"/></svg>
+          </span>LGPD</span>
+
+          <span class="pill"><span class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M16 11c1.5 0 3-1.5 3-3s-1.5-3-3-3-3 1.5-3 3"/><path d="M8 11c-1.5 0-3-1.5-3-3s1.5-3 3-3 3 1.5 3 3"/><path d="M8 11h8"/><path d="M12 11v10"/></svg>
+          </span>M&A • Consórcios • SPE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIÊNCIA (TRILHAS) -->
+    <section id="experiencia" class="reveal">
+      <div class="sectionTitle">
+        <div>
+          <h2>Experiência (trilhas para datas sobrepostas)</h2>
+          <p>Estrutura em duas frentes para evitar confusão e reforçar o diferencial público + privado.</p>
+        </div>
+      </div>
+
+      <div class="tracks">
+        <div class="card">
+          <div class="trackTitle">
+            <div class="t">Atuação Corporativa (In-house)</div>
+            <div class="badge">Carreira principal</div>
           </div>
-          <div style="color:var(--muted); font-size:12px; white-space:nowrap;">(período)</div>
+
+          <div class="job">
+            <div class="h">2015 – 2025 • Senior Legal Counsel / Jurídico Corporativo — Multinacional (Infraestrutura)</div>
+            <div class="m">Contratos complexos • Licitações • Governança • Risco • Interface com Diretoria</div>
+            <div class="d">Inclua 2–3 bullets com impacto (ex.: governança, redução de risco, continuidade operacional).</div>
+          </div>
+
+          <div class="job">
+            <div class="h">2007 – 2014 • Jurídico / Licitações — Engenharia & Consultoria</div>
+            <div class="m">Ciclo licitatório • Contratos administrativos • Pareceres • Mitigação de riscos</div>
+            <div class="d">Inclua 2–3 bullets com entregas (ex.: estratégia de recursos, compliance, documentação).</div>
+          </div>
         </div>
 
-        <div style="display:flex; justify-content:space-between; gap:12px;">
-          <div>
-            <div style="font-weight:700;">Assessor Jurídico / Licitações — Infraestrutura</div>
-            <div style="color:var(--muted); font-size:12px; margin-top:4px; line-height:1.45;">Contratos administrativos • Riscos • Pareceres • Governança</div>
+        <div class="card">
+          <div class="trackTitle">
+            <div class="t">Setor Público (diferencial)</div>
+            <div class="badge">Atuação concomitante</div>
           </div>
-          <div style="color:var(--muted); font-size:12px; white-space:nowrap;">(período)</div>
+
+          <div class="job">
+            <div class="h">2012 – 2020 • Advogado Consultor — Órgão Público (SP)</div>
+            <div class="m">Comissões de licitação • Pareceres • Interface com órgãos de controle</div>
+            <div class="d">
+              <strong>Nota:</strong> atuação concomitante (consultoria/participação em comissões), reforçando expertise em ambientes regulados.
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="h">Formação</div>
+            <div class="m">MBA / LL.M (se aplicável) • Graduação em Direito</div>
+            <div class="d">Adicione certificações relevantes e idiomas.</div>
+          </div>
         </div>
       </div>
     </section>
@@ -488,41 +708,54 @@
     <section id="contato" class="reveal">
       <div class="sectionTitle">
         <div>
-          <h2>Contato</h2>
-          <p>Para oportunidades de Legal Counsel Sênior / Gerente Jurídico.</p>
+          <h2>Contato rápido</h2>
+          <p>Deixe o headhunter com 2 cliques: abrir LinkedIn/WhatsApp e copiar mensagem.</p>
         </div>
       </div>
 
       <div class="grid2">
         <div class="card">
-          <h3 style="margin:0; font-size:14px">Canais</h3>
-          <ul class="list">
-            <!-- TROQUE para o e-mail/telefone oficiais do Higor -->
-            <li><span class="tick"></span><span><strong>E-mail:</strong> <a href="mailto:aguiar.higor@gmail.com">aguiar.higor@gmail.com</a></span></li>
-            <li><span class="tick"></span><span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adv-higor-aguiar" target="_blank" rel="noreferrer">/adv-higor-aguiar</a></span></li>
-          </ul>
+          <h3 style="margin:0; font-size:14px;">Canais</h3>
+          <div style="margin-top:10px; color:var(--muted); font-size:13px; line-height:1.8;">
+            <!-- TROQUE para os contatos oficiais -->
+            <div><strong>E-mail:</strong> <a href="mailto:aguiar.higor@gmail.com">aguiar.higor@gmail.com</a></div>
+            <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adv-higor-aguiar" target="_blank" rel="noreferrer">/adv-higor-aguiar</a></div>
+            <!-- WhatsApp: troque 55119XXXXYYYY -->
+            <div><strong>WhatsApp:</strong> <a id="waLink" href="https://wa.me/5511999999999" target="_blank" rel="noreferrer">Abrir conversa</a></div>
+          </div>
+
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn primary" href="#" id="cvBottom" target="_blank" rel="noreferrer">Baixar CV (PDF)</a>
+            <button class="btn" id="copyBtn" type="button">Copiar mensagem</button>
+          </div>
         </div>
 
         <div class="card">
-          <h3 style="margin:0; font-size:14px">Mensagem pronta</h3>
-          <p style="margin:10px 0 0; color:var(--muted); line-height:1.7; font-size:13px;">
+          <h3 style="margin:0; font-size:14px;">Mensagem pronta para recrutadores</h3>
+          <div class="copyBox" id="copyText">
             Olá! Sou Legal Counsel Sênior com experiência em contratos complexos, licitações e governança,
-            atuando com foco em mitigação de riscos, compliance e suporte à tomada de decisão executiva.
-            Posso compartilhar CV e cases aderentes à posição.
-          </p>
-          <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;">
-            <a class="btn primary" href="#" target="_blank" rel="noreferrer">Baixar CV (PDF)</a>
-            <a class="btn" href="https://www.linkedin.com/in/adv-higor-aguiar" target="_blank" rel="noreferrer">Abrir LinkedIn</a>
+            atuando como Business Partner para decisões executivas. Tenho histórico de mitigação de riscos,
+            preservação de receitas e suporte à continuidade operacional em ambientes regulados. Posso compartilhar
+            CV e cases aderentes à posição.
+          </div>
+          <div style="margin-top:12px; color:var(--muted); font-size:12px;">
+            Dica: personalize 1 linha com a vaga/empresa antes de enviar.
           </div>
         </div>
       </div>
     </section>
 
     <div class="footer">
-      <div>© <span id="y"></span> Higor Aguiar • Portfólio executivo</div>
-      <div>Layout multinacional elegante • Animações suaves</div>
+      <div>© <span id="y"></span> Higor Aguiar • Executive Portfolio</div>
+      <div>Hero claro premium • Multinacional elegante • Animações suaves</div>
     </div>
   </main>
+
+  <!-- Floating CTA -->
+  <div class="floatCta">
+    <a class="btn primary" href="https://www.linkedin.com/in/adv-higor-aguiar" target="_blank" rel="noreferrer">Fale com Higor (LinkedIn)</a>
+    <a class="btn whats" href="https://wa.me/5511999999999" target="_blank" rel="noreferrer">Fale com Higor (WhatsApp)</a>
+  </div>
 
   <script>
     // Ano
@@ -531,24 +764,42 @@
     // Reveal on load + on scroll
     const els = [...document.querySelectorAll(".reveal")];
     const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add("in");
-      });
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("in"); });
     }, { threshold: 0.12 });
 
     els.forEach((el, idx) => {
-      // pequeno delay progressivo para ficar “executivo”
       el.style.transitionDelay = Math.min(idx * 90, 360) + "ms";
       io.observe(el);
     });
 
-    // força o hero a aparecer rápido se já estiver visível
     window.addEventListener("load", () => {
       setTimeout(() => els.forEach(el => {
         const r = el.getBoundingClientRect();
         if (r.top < window.innerHeight * 0.9) el.classList.add("in");
       }), 80);
     });
+
+    // Copiar mensagem
+    const copyBtn = document.getElementById("copyBtn");
+    const copyText = document.getElementById("copyText").innerText.trim();
+    copyBtn.addEventListener("click", async () => {
+      try{
+        await navigator.clipboard.writeText(copyText);
+        copyBtn.textContent = "Copiado ✓";
+        setTimeout(()=> copyBtn.textContent = "Copiar mensagem", 1600);
+      }catch(e){
+        alert("Não foi possível copiar automaticamente. Selecione o texto e copie manualmente.");
+      }
+    });
+
+    // (Opcional) link do CV em dois botões
+    // 1) Suba o PDF no repositório com o nome "cv-higor.pdf"
+    // 2) Troque o href abaixo para "cv-higor.pdf"
+    const cvHref = "#"; // ex: "cv-higor.pdf"
+    document.getElementById("cvTop").href = cvHref;
+    document.getElementById("cvBottom").href = cvHref;
+
+    // WhatsApp: troque o número nos links do HTML (wa.me/55...)
   </script>
 </body>
 </html>
