@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="pt-BR" id="top">
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Higor R. Aguiar | Consultoria e Assessoria Empresarial</title>
-  <meta name="description" content="Consultoria e assessoria empresarial. Gestão e soluções jurídicas. Licitações e contratos administrativos. Governança, compliance e gestão de riscos." />
+  <meta name="description" content="Consultoria e assessoria empresarial. Gestão e soluções jurídicas. Licitações e contratos administrativos. Integridade em negócios públicos e privados." />
   <meta name="theme-color" content="#0b1220" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,16 +16,11 @@
       --navy:#0b1220;
       --ink:#0b1220;
       --muted:#475569;
-
-      --bg2:#f3f4f6;
-      --panel2:rgba(255,255,255,.92);
-
+      --panel:#ffffff;
       --line: rgba(15, 23, 42, .12);
       --softLine: rgba(15, 23, 42, .08);
-
-      --shadow3: 0 22px 55px rgba(2,6,23,.10);
-      --shadow4: 0 12px 28px rgba(2,6,23,.08);
-
+      --shadow: 0 18px 45px rgba(2, 6, 23, .10);
+      --shadow2: 0 10px 24px rgba(2, 6, 23, .08);
       --radius:18px;
 
       --accent:#0f766e;
@@ -42,59 +37,76 @@
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(1100px 620px at 20% 8%, rgba(11,18,32,.06), transparent 62%),
-        radial-gradient(900px 520px at 90% 12%, rgba(199,167,108,.10), transparent 55%),
-        linear-gradient(180deg, #fbfbfc 0%, var(--bg2) 55%, #fbfbfc 100%);
+        radial-gradient(980px 560px at 20% 8%, rgba(15,118,110,.10), transparent 60%),
+        radial-gradient(900px 520px at 90% 12%, rgba(11,18,32,.08), transparent 55%),
+        linear-gradient(180deg, #f8fafc 0%, #f3f4f6 55%, #f8fafc 100%);
     }
 
     a{ color: inherit; }
     .wrap{ max-width: var(--max); margin:0 auto; padding: 22px 18px 74px; }
 
-    /* Topbar */
+    /* TOPBAR (premium + logo grande + sem cortar) */
     .topbar{
       position: sticky; top: 0; z-index: 50;
-      background: rgba(255,255,255,.86);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(15,23,42,.10);
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.78));
+      backdrop-filter: blur(12px);
+    }
+    .topbar:before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(680px 220px at 20% 35%, rgba(199,167,108,.18), transparent 60%),
+        radial-gradient(720px 240px at 85% 20%, rgba(15,118,110,.10), transparent 60%);
+      opacity:.9;
+      pointer-events:none;
     }
     .topbar .inner{
+      position:relative;
       max-width: var(--max);
       margin:0 auto;
-      padding: 12px 18px;
+      padding: 14px 18px;
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap: 14px;
-      min-height: 112px; /* ✅ HEADER MAIS ALTO */
     }
 
-    /* Brand / Logo */
     .brand{
       display:flex;
       align-items:center;
-      text-decoration:none;
-      min-width: 420px; /* ✅ ocupa mais espaço no header */
-      flex: 1 1 420px;
+      gap: 14px;
+      min-width: 340px;
     }
 
-    /* ✅ CAIXA DO LOGO: aumenta e faz zoom elegante */
-    .logoFrame{
-      width: min(520px, 44vw); /* ✅ cresce junto com a tela */
-      height: 96px;          /* ✅ logo legível */
+    .brandLogo{
       display:flex;
       align-items:center;
-      overflow:hidden;
+      gap: 12px;
     }
-    .logoFull{
-      width: 100%;
-      height: 100%;
+    .brandLogo img{
+      height: 58px;           /* AQUI: logo maior no desktop */
+      width: auto;
       display:block;
-
-      /* ✅ “zoom” para logo vertical ficar legível */
-      object-fit: cover;
+      object-fit: contain;     /* não corta */
       object-position: left center;
-      transform: scale(1.12); /* ✅ ajuste fino do zoom */
-      transform-origin: left center;
+      filter: drop-shadow(0 10px 18px rgba(2,6,23,.12));
+    }
+
+    .brandText{
+      display:flex;
+      flex-direction:column;
+      gap: 3px;
+      line-height: 1.1;
+    }
+    .brandText .name{
+      font-weight: 700;
+      letter-spacing:.2px;
+    }
+    .brandText .role{
+      font-size: 12px;
+      color: var(--muted);
     }
 
     nav{ display:none; gap: 10px; align-items:center; }
@@ -102,20 +114,23 @@
       text-decoration:none;
       font-size: 13px;
       color: var(--muted);
-      padding: 8px 10px;
+      padding: 9px 10px;
       border-radius: 999px;
-      white-space: nowrap;
+      border: 1px solid transparent;
     }
-    nav a:hover{ background: rgba(2,6,23,.06); color: var(--ink); }
+    nav a:hover{
+      background: rgba(2,6,23,.04);
+      border-color: rgba(2,6,23,.06);
+      color: var(--ink);
+    }
 
     .actions{ display:flex; gap: 10px; align-items:center; flex-wrap:wrap; }
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
-      gap: 10px;
       padding: 10px 13px;
       border-radius: 999px;
-      border: 1px solid rgba(15,23,42,.14);
-      background: rgba(255,255,255,.92);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.86);
       box-shadow: 0 8px 20px rgba(2,6,23,.08);
       text-decoration:none;
       font-size: 13px;
@@ -125,23 +140,22 @@
     }
     .btn:hover{ transform: translateY(-1px); box-shadow: 0 12px 28px rgba(2,6,23,.10); }
     .btn.primary{
-      background: linear-gradient(135deg, rgba(11,18,32,.96), rgba(11,18,32,.96));
+      background: linear-gradient(135deg, rgba(11,18,32,.92), rgba(11,18,32,.92));
       color: #fff;
       border-color: rgba(11,18,32,.18);
       box-shadow: 0 16px 32px rgba(2,6,23,.18);
     }
-    .btn.primary:hover{ box-shadow: 0 18px 38px rgba(2,6,23,.22); }
 
     /* Hero */
     .heroShell{
       border: 1px solid var(--softLine);
       border-radius: 26px;
       overflow:hidden;
-      box-shadow: var(--shadow3);
+      box-shadow: var(--shadow);
       background:
-        radial-gradient(760px 420px at 18% 18%, rgba(11,18,32,.06), transparent 60%),
-        radial-gradient(760px 420px at 88% 22%, rgba(199,167,108,.10), transparent 58%),
-        linear-gradient(180deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.82) 100%);
+        radial-gradient(700px 360px at 15% 18%, rgba(15,118,110,.10), transparent 60%),
+        radial-gradient(760px 420px at 88% 22%, rgba(11,18,32,.07), transparent 58%),
+        linear-gradient(180deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,.72) 100%);
       position: relative;
     }
     .heroShell:before{
@@ -151,9 +165,9 @@
         linear-gradient(to right, rgba(15,23,42,.06) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(15,23,42,.06) 1px, transparent 1px);
       background-size: 44px 44px;
-      opacity: .10;
+      opacity: .18;
       pointer-events:none;
-      mask-image: radial-gradient(520px 280px at 24% 18%, black 0%, transparent 62%);
+      mask-image: radial-gradient(500px 260px at 25% 18%, black 0%, transparent 60%);
     }
 
     .hero{
@@ -211,14 +225,13 @@
     }
 
     .card{
-      border: 1px solid rgba(15,23,42,.10);
-      background: var(--panel2);
+      border: 1px solid var(--softLine);
+      background: rgba(255,255,255,.86);
       border-radius: var(--radius);
-      box-shadow: var(--shadow4);
+      box-shadow: var(--shadow2);
       padding: 16px;
     }
 
-    /* Profile */
     .profile{
       display:flex; gap: 14px; align-items:center;
       padding: 14px;
@@ -241,10 +254,10 @@
       font-size: 12px;
     }
     .avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
+
     .p1{ font-weight: 700; }
     .p2{ margin-top: 4px; font-size: 12px; color: var(--muted); line-height: 1.4; }
 
-    /* Metrics */
     .metricsBanner{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
@@ -263,7 +276,7 @@
       letter-spacing: -.3px;
       font-size: 18px;
       display:flex; align-items:baseline; gap: 8px;
-      flex-wrap: wrap;
+      flex-wrap:wrap;
     }
     .metric .big .tag{
       font-size: 11px;
@@ -286,7 +299,7 @@
       font-family: "Playfair Display", serif;
       font-weight: 600;
       font-size: 20px;
-      letter-spacing: -.25px;
+      letter-spacing: -.2px;
     }
     .sectionTitle p{
       margin:0;
@@ -296,30 +309,13 @@
       max-width: 82ch;
     }
 
-    .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
-
-    /* Tags */
-    .pillGrid{
-      display:flex; flex-wrap:wrap; gap: 10px;
-      margin-top: 8px;
-    }
-    .pill{
-      display:inline-flex; gap: 8px; align-items:center;
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--softLine);
-      background: rgba(255,255,255,.74);
-      color: var(--muted);
-      font-size: 12px;
-      white-space: nowrap;
-    }
-    .ico{ width:16px; height:16px; display:inline-block; }
-    .ico svg{ width:16px; height:16px; stroke: var(--navy); opacity: .78; }
+    .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
     /* Cases */
     .cases{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .case h3{ margin:0; font-size: 14px; }
     .case p{ margin: 8px 0 0; font-size: 13px; line-height: 1.65; color: var(--muted); }
+
     details{
       margin-top: 10px;
       border-top: 1px solid rgba(15,23,42,.08);
@@ -344,21 +340,33 @@
       opacity:.9;
     }
     details[open] .chev{ transform: rotate(225deg); }
+
     .case-bullets{
       margin: 10px 0 0;
       padding-left: 18px;
       color: var(--muted);
       font-size: 13px;
-      line-height: 1.7;
+      line-height: 1.65;
     }
     .case-bullets li{ margin: 8px 0; }
 
-    /* Experiência */
-    .tracks{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
+    /* Competências */
+    .pillGrid{ display:flex; flex-wrap:wrap; gap: 10px; margin-top: 8px; }
+    .pill{
+      display:inline-flex; gap: 8px; align-items:center;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--softLine);
+      background: rgba(255,255,255,.74);
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
     }
+    .ico{ width:16px; height:16px; display:inline-block; }
+    .ico svg{ width:16px; height:16px; stroke: var(--navy); opacity: .78; }
+
+    /* Experiência */
+    .tracks{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .trackTitle{
       display:flex; align-items:center; justify-content:space-between; gap: 10px;
       margin-bottom: 10px;
@@ -380,29 +388,138 @@
     .job:first-child{ border-top:none; padding-top: 0; }
     .job .h{ font-weight: 700; font-size: 13px; }
     .job .m{ margin-top: 5px; font-size: 12px; color: var(--muted); line-height: 1.5; }
-    .job .d{ margin-top: 6px; font-size: 12px; color: var(--muted); line-height: 1.55; }
+    .job .d{ margin-top: 8px; font-size: 12px; color: var(--muted); line-height: 1.65; }
 
-    /* Contato - Mensagem */
-    .copyBox{
-      margin-top: 10px;
+    /* Avaliações (estilo premium) */
+    .reviewsShell{
+      position:relative;
+      overflow:hidden;
+      border-radius: 22px;
+      border: 1px solid var(--softLine);
+      background:
+        radial-gradient(720px 260px at 20% 20%, rgba(199,167,108,.16), transparent 60%),
+        radial-gradient(760px 260px at 85% 30%, rgba(15,118,110,.10), transparent 60%),
+        rgba(255,255,255,.72);
+      box-shadow: var(--shadow2);
+      padding: 18px;
+    }
+    .reviewsTop{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .reviewsTop .hint{
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.4;
+      max-width: 78ch;
+    }
+    .reviewsRow{
+      display:flex;
+      gap: 14px;
+      overflow:hidden;
+      scroll-behavior:smooth;
+    }
+    .reviewCard{
+      min-width: 320px;
+      max-width: 360px;
+      flex: 0 0 auto;
+      border: 1px solid var(--softLine);
+      background: rgba(255,255,255,.85);
+      border-radius: 18px;
       padding: 14px;
-      border-radius: 16px;
-      border: 1px solid rgba(15,23,42,.10);
-      background: rgba(248,250,252,.92);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.7);
+      box-shadow: 0 12px 26px rgba(2,6,23,.08);
+    }
+    .reviewHead{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .reviewWho{
+      display:flex; align-items:center; gap: 10px;
+      min-width:0;
+    }
+    .reviewAvatar{
+      width: 40px; height: 40px;
+      border-radius: 999px;
+      border: 1px solid var(--softLine);
+      background:
+        radial-gradient(18px 18px at 30% 30%, rgba(15,118,110,.18), transparent 60%),
+        rgba(255,255,255,.85);
+      display:grid; place-items:center;
+      font-weight:800;
+      color: var(--navy);
+    }
+    .reviewMeta{ min-width:0; }
+    .reviewName{
+      font-weight: 800;
+      font-size: 13px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .reviewWhen{
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .stars{
+      font-size: 13px;
+      color: #d4a72c;
+      letter-spacing: 1px;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .reviewText{
       color: var(--muted);
       font-size: 13px;
-      line-height: 1.75;
-      letter-spacing: .1px;
+      line-height: 1.65;
+      margin: 0;
+    }
+    .reviewNav{
+      position:absolute;
+      top: 54%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid var(--softLine);
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 14px 30px rgba(2,6,23,.10);
+      display:grid;
+      place-items:center;
+      cursor:pointer;
+      user-select:none;
+    }
+    .reviewNav:hover{ transform: translateY(-50%) scale(1.02); }
+    .reviewNav.left{ left: 10px; }
+    .reviewNav.right{ right: 10px; }
+    .arrow{
+      width: 10px; height: 10px;
+      border-right: 2px solid rgba(11,18,32,.60);
+      border-bottom: 2px solid rgba(11,18,32,.60);
+    }
+    .arrow.left{ transform: rotate(135deg); margin-left: 4px; }
+    .arrow.right{ transform: rotate(-45deg); margin-right: 4px; }
 
-      white-space: normal;
+    /* Contato */
+    .copyBox{
+      margin-top: 10px;
+      padding: 14px 14px;
+      border-radius: 16px;
+      border: 1px solid var(--softLine);
+      background: rgba(255,255,255,.70);
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 13px;
+      white-space: normal;         /* evita “distorção” */
       word-break: normal;
       overflow-wrap: anywhere;
-      hyphens: auto;
-
-      max-width: 70ch;
     }
-
     .footer{
       margin-top: 34px;
       padding-top: 18px;
@@ -448,9 +565,10 @@
       .metricsBanner{ grid-template-columns: 1fr; }
       .grid2, .cases, .tracks{ grid-template-columns: 1fr; }
       .floatCta{ right: 12px; bottom: 12px; }
-      .copyBox{ max-width: 100%; }
-      .brand{ min-width: 0; flex: 1 1 auto; }
-      .logoFrame{ width: min(560px, 68vw); height: 92px; }
+      .brand{ min-width: unset; }
+      .brandLogo img{ height: 46px; }  /* logo maior no mobile também */
+      .reviewNav{ display:none; }      /* setas somem no mobile (arrasta com dedo) */
+      .reviewsRow{ overflow:auto; padding-bottom: 8px; }
     }
   </style>
 </head>
@@ -459,16 +577,23 @@
   <!-- TOPBAR -->
   <div class="topbar">
     <div class="inner">
-      <a class="brand" href="#top" aria-label="Voltar ao topo">
-        <div class="logoFrame">
-          <img class="logoFull" src="DesignHigor.png" alt="Higor R. Aguiar" />
+      <div class="brand">
+        <div class="brandLogo">
+          <!-- Coloque DesignHigor.png no /public (Vercel) -->
+          <img src="DesignHigor.png" alt="Higor R. Aguiar" />
         </div>
-      </a>
+
+        <div class="brandText" aria-hidden="true" style="display:none;">
+          <div class="name">Higor Aguiar</div>
+          <div class="role">Consultor Jurídico • Law Business Partner</div>
+        </div>
+      </div>
 
       <nav>
         <a href="#proposta">Proposta</a>
         <a href="#metricas">Impacto</a>
         <a href="#cases">Cases</a>
+        <a href="#avaliacoes">Avaliações</a>
         <a href="#expertise">Competências</a>
         <a href="#experiencia">Experiência</a>
         <a href="#contato">Contato</a>
@@ -519,9 +644,9 @@
             </div>
             <div>
               <div class="p1">Executive Portfolio</div>
-              <div class="p2">Consultoria e Assessoria Empresarial</div>
+              <div class="p2">Consultor Jurídico • Law Business Partner</div>
               <div style="margin-top:10px; font-size:12px; color:var(--muted); line-height:1.5;">
-                Gestão e soluções jurídicas • Licitações e contratos administrativos.
+                Empresarial • Contratos • Licitações • Governança, Compliance e Gestão de Riscos.
               </div>
             </div>
           </div>
@@ -539,25 +664,25 @@
           <div class="big">~R$ 150 milhões/ano <span class="tag">Governança</span></div>
           <div class="small">Gestão e governança contratual em licitações e contratos de infraestrutura, com foco em segurança jurídica, conformidade e previsibilidade da execução.</div>
         </div>
-
         <div class="metric">
           <div class="big">~R$ 13 milhões/mês <span class="tag">Receita</span></div>
           <div class="small">Suporte na incorporação M&A: identificação de contratos, celebração de aditivos (clientes, fornecedores, parceiros, colaboradores), atualização cadastral, integração pós aquisição, alinhamento regulatório e continuidade das operações.</div>
         </div>
-
         <div class="metric">
           <div class="big">~R$ 8 milhões <span class="tag">Eficiência</span></div>
           <div class="small">Recuperação de créditos e fortalecimento de regularidade fiscal com governança, rastreabilidade e mitigação de riscos tributários.</div>
         </div>
-
         <div class="metric">
           <div class="big">~R$ 5 milhões <span class="tag">Eficiência</span></div>
           <div class="small">Recuperação de créditos previdenciários retidos na fonte para compensação em folha de pagamento e preservação do caixa.</div>
         </div>
-
         <div class="metric">
           <div class="big">~R$ 50 milhões <span class="tag">Eficiência</span></div>
-          <div class="small">Negociação sindical e acordo coletivo que possibilitaram a continuidade de contratos de operação rodoviária e êxito em novas licitações.</div>
+          <div class="small">Negociação sindical e acordo coletivo que possibilitaram a continuidade de contratos de Operação Rodoviária e êxito em novas licitações.</div>
+        </div>
+        <div class="metric">
+          <div class="big">Ambientes regulados <span class="tag">C-Level</span></div>
+          <div class="small">Interface com alta gestão e áreas técnicas/operacionais, estruturando decisões defensáveis com governança, compliance e mitigação de risco.</div>
         </div>
       </div>
     </div>
@@ -605,7 +730,6 @@
           <p><strong>Contexto:</strong> Disputas e riscos em licitações e contratos administrativos de infraestrutura.</p>
           <p><strong>Decisão:</strong> Estratégia jurídica para recursos/impugnações, governança documental e cláusulas críticas.</p>
           <p><strong>Impacto:</strong> Redução de exposição e aumento de previsibilidade na execução.</p>
-
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
             <ul class="case-bullets">
@@ -621,7 +745,6 @@
           <p><strong>Contexto:</strong> Mudanças organizacionais e riscos de interrupção contratual/regulatória.</p>
           <p><strong>Decisão:</strong> Plano jurídico de transição, controles e renegociação de cláusulas sensíveis.</p>
           <p><strong>Impacto:</strong> Preservação de receitas e estabilidade da operação.</p>
-
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
             <ul class="case-bullets">
@@ -637,7 +760,6 @@
           <p><strong>Contexto:</strong> Mudanças de escopo, prazos e eventos externos gerando desequilíbrio.</p>
           <p><strong>Decisão:</strong> Estruturação de pleitos com evidências, matriz de riscos e tese jurídica.</p>
           <p><strong>Impacto:</strong> Recuperação de valores e mitigação de perdas contratuais.</p>
-
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
             <ul class="case-bullets">
@@ -653,7 +775,6 @@
           <p><strong>Contexto:</strong> Oportunidades de recuperação e mitigação de risco tributário.</p>
           <p><strong>Decisão:</strong> Revisão técnica, conformidade e governança para execução segura.</p>
           <p><strong>Impacto:</strong> Melhoria financeira com compliance e rastreabilidade.</p>
-
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
             <ul class="case-bullets">
@@ -663,6 +784,35 @@
             </ul>
           </details>
         </div>
+      </div>
+    </section>
+
+    <!-- AVALIAÇÕES -->
+    <section id="avaliacoes" class="reveal">
+      <div class="sectionTitle">
+        <div>
+          <h2>Avaliações</h2>
+          <p>Recomendações selecionadas (curadoria). Para ver todas, acesse o LinkedIn.</p>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn" href="https://www.linkedin.com/in/adv-higor-aguiar/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noreferrer">
+            Ver recomendações no LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="reviewsShell">
+        <div class="reviewsTop">
+          <div class="hint">
+            <strong>Como usar:</strong> preencha o array <code>REVIEWS</code> no final do HTML com as recomendações (nome, quando, texto).
+            Assim você mantém 100% de credibilidade e controle do conteúdo.
+          </div>
+        </div>
+
+        <div class="reviewNav left" id="revPrev" aria-label="Anterior"><span class="arrow left"></span></div>
+        <div class="reviewNav right" id="revNext" aria-label="Próximo"><span class="arrow right"></span></div>
+
+        <div class="reviewsRow" id="reviewsRow" aria-label="Carrossel de avaliações"></div>
       </div>
     </section>
 
@@ -736,8 +886,8 @@
             <div class="h">2015 – 2025 • Senior Legal Counsel / Jurídico Corporativo — Multinacional (Infraestrutura)</div>
             <div class="m">Contratos complexos • Licitações • Governança • Risco • Interface com Diretoria</div>
             <div class="d">
-              Contratos estratégicos (públicos/privados): negociação, governança e mitigação de riscos jurídico-financeiros em projetos regulados.<br>
-              Licitações e contratos administrativos: estratégia recursal, matriz de riscos e suporte à execução contratual.<br>
+              Contratos estratégicos (públicos/privados): negociação, governança e mitigação de riscos jurídico-financeiros em projetos regulados.<br/>
+              Licitações e contratos administrativos: estratégia recursal, matriz de riscos e suporte à execução contratual.<br/>
               Resultados relevantes: ~R$ 150 mi/ano em contratos; preservação de ~R$ 13 mi/mês; recuperação de ~R$ 8 mi em créditos.
             </div>
           </div>
@@ -746,8 +896,8 @@
             <div class="h">2007 – 2014 • Jurídico / Licitações — Engenharia & Consultoria</div>
             <div class="m">Ciclo licitatório • Contratos administrativos • Pareceres • Mitigação de riscos</div>
             <div class="d">
-              Ciclo licitatório completo: análise de editais, propostas, recursos/impugnações e contratação.<br>
-              Interface com órgãos de controle e auditorias: conformidade, resposta a demandas e governança documental.<br>
+              Ciclo licitatório completo: análise de editais, propostas, recursos/impugnações e contratação.<br/>
+              Interface com órgãos de controle e auditorias: conformidade, resposta a demandas e governança documental.<br/>
               Eficiência e regularidade: recuperação de ~R$ 5 mi e suporte jurídico fiscal/financeiro/trabalhista.
             </div>
           </div>
@@ -762,17 +912,15 @@
           <div class="job">
             <div class="h">2012 – 2020 • Advogado Consultor — Órgão Público (SP)</div>
             <div class="m">Comissões de licitação • Pareceres • Interface com órgãos de controle</div>
-            <div class="d">
-              <strong>Nota:</strong> atuação concomitante (consultoria/participação em comissões), reforçando expertise em ambientes regulados.
-            </div>
+            <div class="d"><strong>Nota:</strong> atuação concomitante (consultoria/participação em comissões), reforçando expertise em ambientes regulados.</div>
           </div>
 
           <div class="job">
             <div class="h">Formação</div>
-            <div class="m">MBA em Gestão do Direito nas Empresas – FEA/USP</div>
             <div class="d">
-              Pós-graduação em Direito Administrativo e Licitações; e Direito Civil – Faculdade de Minas<br>
-              LL.M. em Direito de Negócios – Faculdades Metropolitanas Unidas de São Paulo<br>
+              MBA em Gestão do Direito nas Empresas – FEA/USP (em curso, 2026)<br/>
+              Pós-graduação em Direito Administrativo e Licitações; e Direito Civil – Faculdade de Minas<br/>
+              LL.M. em Direito de Negócios – Faculdades Metropolitanas Unidas de São Paulo<br/>
               Graduação em Direito – Universidade Cidade de São Paulo
             </div>
           </div>
@@ -800,6 +948,7 @@
 
           <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
             <button class="btn primary" id="copyBtn" type="button">Copiar mensagem</button>
+            <a class="btn" href="https://www.linkedin.com/in/adv-higor-aguiar" target="_blank" rel="noreferrer">Falar no LinkedIn</a>
           </div>
         </div>
 
@@ -807,8 +956,8 @@
           <h3 style="margin:0; font-size:14px;">Mensagem</h3>
           <div class="copyBox" id="copyText">
             Advogado com perfil multidisciplinar e com forte atuação em contratos complexos públicos e privados,
-            licitações e gestão jurídica estratégica, atuando em ambientes regulados como Business Partner no apoio
-            a decisões executivas, com foco na mitigação de riscos e segurança jurídica às operações da organização.
+            licitações e gestão jurídica estratégica, atuando em ambientes regulados como Business Partner no apoio a decisões
+            executivas, com foco na mitigação de riscos e segurança jurídica às operações da organização.
           </div>
           <div style="margin-top:12px; color:var(--muted); font-size:12px;">
             Para maiores detalhes entre em contato.
@@ -819,7 +968,7 @@
 
     <div class="footer">
       <div>© <span id="y"></span> Higor Aguiar</div>
-      <div>Integridade em negócios públicos e privados</div>
+      <div>Executive Portfolio</div>
     </div>
   </main>
 
@@ -830,18 +979,18 @@
   </div>
 
   <script>
+    // Ano
     document.getElementById("y").textContent = new Date().getFullYear();
 
+    // Reveal
     const els = [...document.querySelectorAll(".reveal")];
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("in"); });
     }, { threshold: 0.12 });
-
     els.forEach((el, idx) => {
       el.style.transitionDelay = Math.min(idx * 90, 360) + "ms";
       io.observe(el);
     });
-
     window.addEventListener("load", () => {
       setTimeout(() => els.forEach(el => {
         const r = el.getBoundingClientRect();
@@ -849,17 +998,62 @@
       }), 80);
     });
 
+    // Copiar mensagem
     const copyBtn = document.getElementById("copyBtn");
     copyBtn.addEventListener("click", async () => {
       try{
-        const copyText = document.getElementById("copyText").innerText.trim();
-        await navigator.clipboard.writeText(copyText);
+        const txt = document.getElementById("copyText").innerText.trim();
+        await navigator.clipboard.writeText(txt);
         copyBtn.textContent = "Copiado ✓";
         setTimeout(()=> copyBtn.textContent = "Copiar mensagem", 1600);
       }catch(e){
         alert("Não foi possível copiar automaticamente. Selecione o texto e copie manualmente.");
       }
     });
+
+    // =========================
+    // AVALIAÇÕES (preencher)
+    // =========================
+    // DICA: copie recomendações do LinkedIn e cole aqui.
+    // Exemplo:
+    // { name:"Nome Sobrenome", when:"1 ano atrás", text:"Texto da recomendação...", initials:"NS" }
+    const REVIEWS = [
+      { name:"(Preencha) Nome 1", when:"(Ex.: 2024)", text:"(Cole aqui a recomendação 1.)", initials:"N1" },
+      { name:"(Preencha) Nome 2", when:"(Ex.: 2023)", text:"(Cole aqui a recomendação 2.)", initials:"N2" },
+      { name:"(Preencha) Nome 3", when:"(Ex.: 2022)", text:"(Cole aqui a recomendação 3.)", initials:"N3" }
+    ];
+
+    const row = document.getElementById("reviewsRow");
+    function renderReviews(){
+      row.innerHTML = "";
+      REVIEWS.forEach(r => {
+        const card = document.createElement("div");
+        card.className = "reviewCard";
+        card.innerHTML = `
+          <div class="reviewHead">
+            <div class="reviewWho">
+              <div class="reviewAvatar">${(r.initials || "★").slice(0,3)}</div>
+              <div class="reviewMeta">
+                <div class="reviewName">${r.name}</div>
+                <div class="reviewWhen">${r.when}</div>
+              </div>
+            </div>
+            <div class="stars" aria-hidden="true">★★★★★</div>
+          </div>
+          <p class="reviewText">${r.text}</p>
+        `;
+        row.appendChild(card);
+      });
+    }
+    renderReviews();
+
+    function scrollReviews(dir){
+      const card = row.querySelector(".reviewCard");
+      const step = card ? (card.getBoundingClientRect().width + 14) : 340;
+      row.scrollBy({ left: dir * step, behavior: "smooth" });
+    }
+    document.getElementById("revPrev").addEventListener("click", () => scrollReviews(-1));
+    document.getElementById("revNext").addEventListener("click", () => scrollReviews(1));
   </script>
 </body>
 </html>
