@@ -3,13 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Higor Aguiar | Consultor Jurídico • Law Business Partner</title>
-  <meta name="description" content="Portfólio executivo: Empresarial, Contratos, Licitações, Governança, Compliance e gestão de riscos. Business Partner para decisões C-level." />
+  <title>Higor Aguiar | Contratos • Licitações • Governança</title>
+  <meta name="description" content="Consultoria e assessoria empresarial com atuação em contratos complexos, licitações e governança, com foco em risco, compliance e previsibilidade." />
   <meta name="theme-color" content="#0b1220" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- Open Graph (LinkedIn/WhatsApp preview) -->
+  <meta property="og:title" content="Higor Aguiar | Contratos • Licitações • Governança" />
+  <meta property="og:description" content="Atuação estratégica em contratos complexos, licitações e governança corporativa, com foco em risco, compliance e previsibilidade." />
+  <meta property="og:image" content="https://higoraguiar.com.br/og-image.png" />
+  <meta property="og:url" content="https://higoraguiar.com.br/" />
+  <meta property="og:type" content="website" />
 
   <style>
     :root{
@@ -62,7 +69,7 @@
       justify-content:space-between;
       gap: 12px;
     }
-    .brand{ display:flex; align-items:center; gap: 12px; min-width: 260px; }
+    .brand{ display:flex; align-items:center; gap: 12px; min-width: 260px; text-decoration:none; }
     .mark{
       width:40px; height:40px; border-radius: 14px;
       background:
@@ -74,6 +81,18 @@
       font-weight: 700;
       letter-spacing:.5px;
       font-family: "Playfair Display", serif;
+      overflow:hidden;
+    }
+    .logoMark{
+      width:44px;
+      height:44px;
+      padding:6px;
+    }
+    .logoMark img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      display:block;
     }
     .brand .name{ font-weight: 700; line-height: 1.1; }
     .brand .role{ font-size: 12px; color: var(--muted); margin-top: 2px; }
@@ -226,10 +245,10 @@
     .p1{ font-weight: 700; }
     .p2{ margin-top: 4px; font-size: 12px; color: var(--muted); line-height: 1.4; }
 
-    /* Metrics banner */
+    /* Metrics banner (auto-fit p/ 3, 4, 5 cards sem quebrar) */
     .metricsBanner{
       display:grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 12px;
       padding: 14px 22px 22px;
     }
@@ -245,6 +264,7 @@
       letter-spacing: -.3px;
       font-size: 18px;
       display:flex; align-items:baseline; gap: 8px;
+      flex-wrap:wrap;
     }
     .metric .big .tag{
       font-size: 11px;
@@ -326,6 +346,18 @@
     }
     details[open] .chev{ transform: rotate(225deg); }
 
+    .case-bullets{
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+    .case-bullets li{
+      margin: 6px 0;
+      line-height: 1.45;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .case-bullets strong{ color: var(--ink); }
+
     /* Experiência em trilhas */
     .tracks{
       display:grid;
@@ -353,7 +385,7 @@
     .job:first-child{ border-top:none; padding-top: 0; }
     .job .h{ font-weight: 700; font-size: 13px; }
     .job .m{ margin-top: 5px; font-size: 12px; color: var(--muted); line-height: 1.5; }
-    .job .d{ margin-top: 6px; font-size: 12px; color: var(--muted); }
+    .job .d{ margin-top: 6px; font-size: 12px; color: var(--muted); line-height: 1.55; }
 
     /* Contato */
     .copyBox{
@@ -377,6 +409,14 @@
       gap: 10px;
       justify-content:space-between;
     }
+    .oabNote{
+      max-width: var(--max);
+      margin: 10px auto 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.5;
+      padding: 0 18px;
+    }
 
     /* Floating CTA */
     .floatCta{
@@ -389,9 +429,7 @@
       gap: 10px;
     }
     .floatCta .btn{ box-shadow: 0 18px 38px rgba(2,6,23,.18); }
-    .btn.whats{
-      background: rgba(255,255,255,.92);
-    }
+    .btn.whats{ background: rgba(255,255,255,.92); }
 
     /* Animations */
     .reveal{
@@ -410,7 +448,6 @@
     @media (min-width: 980px){ nav{ display:flex; } }
     @media (max-width: 980px){
       .hero{ grid-template-columns: 1fr; }
-      .metricsBanner{ grid-template-columns: 1fr; }
       .grid2, .cases, .tracks{ grid-template-columns: 1fr; }
       .floatCta{ right: 12px; bottom: 12px; }
     }
@@ -421,17 +458,20 @@
   <!-- TOPBAR -->
   <div class="topbar">
     <div class="inner">
-      <div class="brand">
-        <div class="mark">HA</div>
+      <a class="brand" href="#top" aria-label="Voltar ao topo">
+        <div class="mark logoMark">
+          <!-- Coloque o arquivo DesignHigor.png na mesma pasta do HTML no Vercel -->
+          <img src="DesignHigor.png" alt="Higor R. Aguiar" />
+        </div>
         <div>
           <div class="name">Higor Aguiar</div>
-          <div class="role"> Consultor Jurídico • Law Business Partner </div>
+          <div class="role">Consultoria e Assessoria Empresarial</div>
         </div>
-      </div>
+      </a>
 
       <nav>
-        <a href="#proposta">Proposta</a>
-        <a href="#metricas">Impacto</a>
+        <a href="#proposta">Como atuo</a>
+        <a href="#metricas">Resultados</a>
         <a href="#cases">Cases</a>
         <a href="#expertise">Competências</a>
         <a href="#experiencia">Experiência</a>
@@ -440,14 +480,11 @@
 
       <div class="actions">
         <a class="btn" href="https://www.linkedin.com/in/adv-higor-aguiar" target="_blank" rel="noreferrer">LinkedIn</a>
-
-        <!-- TROQUE o href pelo link do seu CV PDF (pode ser /cv-higor.pdf no repositório) -->
-        <a class="btn primary" id="cvTop" href="#" target="_blank" rel="noreferrer">Baixar CV (PDF)</a>
       </div>
     </div>
   </div>
 
-  <main class="wrap">
+  <main class="wrap" id="top">
     <!-- HERO CLARO PREMIUM -->
     <div class="heroShell reveal">
       <div class="hero">
@@ -457,11 +494,11 @@
           <h1>Consultoria especializada em gestão e soluções jurídicas para a condução íntegra de negócios públicos e privados.</h1>
 
           <p class="sub">
-           Advogado com trajetória consolidada em empresas nacionais e multinacionais, com foco em Direito Empresarial,
-          Contratos e Licitações desde 2003. Integração direta com Alta Gestão e frentes operacionais, técnicas 
-          e administrativas, mantendo interface multidisciplinar em matérias societárias, tributárias, trabalhistas e
-          regulatórias. Coordenação de equipes, organização de fluxos internos e desenvolvimento de soluções estratégicas
-          voltadas à governança, mitigação de riscos e suporte qualificado à tomada de decisão.
+            Advogado com trajetória consolidada em empresas nacionais e multinacionais, com foco em Direito Empresarial,
+            Contratos e Licitações desde 2003. Integração direta com Alta Gestão e frentes operacionais, técnicas
+            e administrativas, mantendo interface multidisciplinar em matérias societárias, tributárias, trabalhistas e
+            regulatórias. Coordenação de equipes, organização de fluxos internos e desenvolvimento de soluções estratégicas
+            voltadas à governança, mitigação de riscos e suporte qualificado à tomada de decisão.
           </p>
 
           <div class="dividerGold"></div>
@@ -474,19 +511,20 @@
           </div>
 
           <div style="display:flex; gap:10px; margin-top:18px; flex-wrap:wrap">
-            <a class="btn primary" href="#cases">Ver Cases de Sucesso</a>
+            <a class="btn primary" href="#cases">Ver Cases</a>
             <a class="btn" href="#contato">Contato</a>
           </div>
         </div>
 
         <div class="card">
           <div class="profile">
-        <div class="avatar">
-  <img src="foto.jpg" alt="Higor Aguiar" />
+            <div class="avatar">
+              <!-- Coloque sua foto como "foto.jpg" na mesma pasta do HTML, ou ajuste o caminho -->
+              <img src="foto.jpg" alt="Higor Aguiar" />
             </div>
             <div>
               <div class="p1">Executive Portfolio</div>
-              <div class="p2"> Consultor Jurídico • Law Business Partner </div>
+              <div class="p2">Consultor Jurídico • Law Business Partner</div>
               <div style="margin-top:10px; font-size:12px; color:var(--muted); line-height:1.5;">
                 Empresarial • Contratos • Licitações • Governança, Compliance e Gestão de Riscos.
               </div>
@@ -508,21 +546,19 @@
         </div>
         <div class="metric">
           <div class="big">~R$ 13 milhões/mês <span class="tag">Receita</span></div>
-          <div class="small">Suporte na incorporação M&A: identificação de contratos, celebração de aditivos (clientes, fornecedores, parceiros, colaboradores), atualização cadastral, integração pós aquisição, alinhamento regulatório e continuidade das operações.</div>
+          <div class="small">Suporte na incorporação M&A: identificação de contratos, celebração de aditivos, atualização cadastral, integração pós-aquisição, alinhamento regulatório e continuidade das operações.</div>
         </div>
         <div class="metric">
           <div class="big">~R$ 8 milhões <span class="tag">Eficiência</span></div>
           <div class="small">Recuperação de créditos e fortalecimento de regularidade fiscal com governança, rastreabilidade e mitigação de riscos tributários.</div>
-         </div>
-          <div class="metric">
+        </div>
+        <div class="metric">
           <div class="big">~R$ 5 milhões <span class="tag">Eficiência</span></div>
-          <div class="small">recuperação de créditos previdenciários retidos na fonte de para compensação em folha de pagamento e preservação do caixa.</div>
+          <div class="small">Recuperação de créditos previdenciários retidos na fonte para compensação em folha e preservação de caixa.</div>
         </div>
-          <div class="metric">
-          <div class="big">~R$ 50 milhões <span class="tag">Eficiência</span></div>
-          <div class="small">Negociação sindical, acordo coletivo que possibilitou a continuidade de contratos de Operação Rodoviária êxito em novas licitações.</div>
-        </div>
-          </div>
+        <div class="metric">
+          <div class="big">~R$ 50 milhões <span class="tag">Continuidade</span></div>
+          <div class="small">Negociação sindical e acordo coletivo viabilizando continuidade de contratos de operação rodoviária e competitividade em novas licitações.</div>
         </div>
       </div>
     </div>
@@ -538,19 +574,19 @@
 
       <div class="grid2">
         <div class="card">
-          <h3 style="margin:0; font-size:14px;">Decisão executiva com base em risco.</h3>
+          <h3 style="margin:0; font-size:14px;">Decisão executiva com base em risco</h3>
           <p style="margin:10px 0 0; color:var(--muted); line-height:1.75; font-size:13px;">
-            Atuo como ponte entre Jurídico e Diretoria: estruturo cenários, impacto financeiro, alternativas de 
+            Atuo como ponte entre Jurídico e Diretoria: estruturo cenários, impacto financeiro, alternativas de
             negociação e controles de governança para decisões rápidas, defensáveis e alinhadas ao negócio.
-            </p>
+          </p>
         </div>
 
         <div class="card">
           <h3 style="margin:0; font-size:14px;">Licitações e proteção de margem em ambientes regulados</h3>
           <p style="margin:10px 0 0; color:var(--muted); line-height:1.75; font-size:13px;">
-            Experiência no ciclo licitatório e na execução contratual reduz risco de desclassificação, glosas e 
+            Experiência no ciclo licitatório e na execução contratual reduz risco de desclassificação, glosas e
             contingências, reforçando conformidade por meio de matriz de riscos, estratégia recursal e cláusulas críticas.
-            </p>
+          </p>
         </div>
       </div>
     </section>
@@ -572,91 +608,72 @@
           <p><strong>Impacto:</strong> Redução de exposição e aumento de previsibilidade na execução.</p>
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
-            <details>
-  <summary>Ver detalhes <span class="chev"></span></summary>
-  <ul class="case-bullets">
-    <li><strong>Matriz de riscos e cláusulas críticas:</strong> alocação de riscos, gatilhos de revisão/reequilíbrio, governança de evidências.</li>
-    <li><strong>Estratégia recursal/impugnações:</strong> tese, prazos, diligências e saneamento com foco em habilitação e competitividade.</li>
-    <li><strong>Governança documental:</strong> trilha de decisões, registros e controles para auditoria/órgãos de controle.</li>
-  </ul>
-</details>
+            <ul class="case-bullets">
+              <li><strong>Matriz de riscos e cláusulas críticas:</strong> alocação de riscos, gatilhos de revisão/reequilíbrio, governança de evidências.</li>
+              <li><strong>Estratégia recursal/impugnações:</strong> tese, prazos, diligências e saneamento com foco em habilitação e competitividade.</li>
+              <li><strong>Governança documental:</strong> trilha de decisões, registros e controles para auditoria/órgãos de controle.</li>
+            </ul>
           </details>
         </div>
 
         <div class="card case">
           <h3>Integração e continuidade operacional</h3>
-          <p><strong>Contexto:</strong> mudanças organizacionais e riscos de interrupção contratual/regulatória.</p>
-          <p><strong>Decisão:</strong> plano jurídico de transição, controles e renegociação de cláusulas sensíveis.</p>
-          <p><strong>Impacto:</strong> preservação de receitas e estabilidade da operação.</p>
+          <p><strong>Contexto:</strong> Mudanças organizacionais e riscos de interrupção contratual/regulatória.</p>
+          <p><strong>Decisão:</strong> Plano jurídico de transição, controles e renegociação de cláusulas sensíveis.</p>
+          <p><strong>Impacto:</strong> Preservação de receitas e estabilidade da operação.</p>
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
-           <details>
-  <summary>Ver detalhes <span class="chev"></span></summary>
-
-  <ul class="case-bullets">
-    <li><strong> Plano jurídico de transição:</strong> mapa de contratos, aditivos essenciais e cadências de comitê.</li>
-    <li><strong> Controles e aprovações: </strong> pontos de risco, alçadas, fluxos e governança de decisões.</li>
-    <li><strong> Renegociação de cláusulas sensíveis: </strong> continuidade, responsabilidade, garantias e compliance para estabilização. </li>
-  </ul>
-</details>
-
+            <ul class="case-bullets">
+              <li><strong>Plano jurídico de transição:</strong> mapa de contratos, aditivos essenciais e cadências de comitê.</li>
+              <li><strong>Controles e aprovações:</strong> pontos de risco, alçadas, fluxos e governança de decisões.</li>
+              <li><strong>Renegociação de cláusulas sensíveis:</strong> continuidade, responsabilidade, garantias e compliance para estabilização.</li>
+            </ul>
           </details>
         </div>
 
         <div class="card case">
           <h3>Reequilíbrio econômico-financeiro (claims)</h3>
-          <p><strong>Contexto:</strong> mudanças de escopo, prazos e eventos externos gerando desequilíbrio.</p>
-          <p><strong>Decisão:</strong> estruturação de pleitos com evidências, matriz de riscos e tese jurídica.</p>
-          <p><strong>Impacto:</strong> recuperação de valores e mitigação de perdas contratuais.</p>
+          <p><strong>Contexto:</strong> Mudanças de escopo, prazos e eventos externos gerando desequilíbrio.</p>
+          <p><strong>Decisão:</strong> Estruturação de pleitos com evidências, matriz de riscos e tese jurídica.</p>
+          <p><strong>Impacto:</strong> Recuperação de valores e mitigação de perdas contratuais.</p>
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
-           <details>
-  <summary>Ver detalhes <span class="chev"></span></summary>
-
-  <ul class="case-bullets">
-    <li><strong> Documentos de suporte:</strong> evidências, registros, medições, comunicações formais e trilha de aprovação.</li>
-    <li><strong> Nexo causal e quantificação: </strong> matriz de riscos, cronograma, impactos e metodologia de cálculo.</li>
-    <li><strong> Estratégia negocial:</strong>tese jurídica, cenários e condução para reduzir perda e aumentar recuperabilidade.</li>
-  </ul>
-</details>
-
+            <ul class="case-bullets">
+              <li><strong>Documentos de suporte:</strong> evidências, registros, medições, comunicações formais e trilha de aprovação.</li>
+              <li><strong>Nexo causal e quantificação:</strong> matriz de riscos, cronograma, impactos e metodologia de cálculo.</li>
+              <li><strong>Estratégia negocial:</strong> tese jurídica, cenários e condução para reduzir perdas e aumentar recuperabilidade.</li>
+            </ul>
           </details>
         </div>
 
         <div class="card case">
           <h3>Eficiência fiscal e regularidade</h3>
-          <p><strong>Contexto:</strong> oportunidades de recuperação e mitigação de risco tributário.</p>
-          <p><strong>Decisão:</strong> revisão técnica, conformidade e governança para execução segura.</p>
-          <p><strong>Impacto:</strong> melhoria financeira com compliance e rastreabilidade.</p>
+          <p><strong>Contexto:</strong> Oportunidades de recuperação e mitigação de risco tributário.</p>
+          <p><strong>Decisão:</strong> Revisão técnica, conformidade e governança para execução segura.</p>
+          <p><strong>Impacto:</strong> Melhoria financeira com compliance e rastreabilidade.</p>
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
-           <details>
-  <summary>Ver detalhes <span class="chev"></span></summary>
-
-  <ul class="case-bullets">
-    <li><strong> Regularidade e governança fiscal:</strong> enquadramento, retenções, controles e rastreabilidade.</li>
-    <li><strong> Compliance e auditoria:</strong> lastro documental, revisão técnica e mitigação de risco tributário.</li>
-    <li><strong> Recuperação de créditos:</strong>organização do dossiê e condução do processo administrativo fiscal.</li>
-  </ul>
-</details>
-
+            <ul class="case-bullets">
+              <li><strong>Regularidade e governança fiscal:</strong> enquadramento, retenções, controles e rastreabilidade.</li>
+              <li><strong>Compliance e auditoria:</strong> lastro documental, revisão técnica e mitigação de risco tributário.</li>
+              <li><strong>Recuperação de créditos:</strong> organização do dossiê e condução do processo administrativo fiscal.</li>
+            </ul>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- COMPETÊNCIAS / ATS -->
+    <!-- COMPETÊNCIAS -->
     <section id="expertise" class="reveal">
       <div class="sectionTitle">
         <div>
-          <h2>Competências-chave </h2>
-          <p>Leitura Executiva.</p>
+          <h2>Competências-chave</h2>
+          <p>Leitura executiva.</p>
         </div>
       </div>
 
       <div class="card">
         <div class="pillGrid">
-          <!-- Ícones inline (line icons) -->
           <span class="pill"><span class="ico">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M10 6h4"/><path d="M8 6a4 4 0 0 1 8 0v2H8V6Z"/><path d="M6 8h12v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8Z"/></svg>
           </span>Legal Counsel / Gerente Jurídico</span>
@@ -696,7 +713,7 @@
       </div>
     </section>
 
-    <!-- EXPERIÊNCIA (TRILHAS) -->
+    <!-- EXPERIÊNCIA -->
     <section id="experiencia" class="reveal">
       <div class="sectionTitle">
         <div>
@@ -715,18 +732,21 @@
           <div class="job">
             <div class="h">2015 – 2025 • Senior Legal Counsel / Jurídico Corporativo — Multinacional (Infraestrutura)</div>
             <div class="m">Contratos complexos • Licitações • Governança • Risco • Interface com Diretoria</div>
-            <div class="d">Contratos estratégicos (públicos/privados): negociação, governança e mitigação de riscos
-              jurídico-financeiros em projetos regulados.
-              Licitações e contratos administrativos: estratégia recursal, matriz de riscos e suporte à execução contratual.
-              Resultados relevantes: ~R$ 150 mi/ano em contratos; preservação de ~R$ 13 mi/mês; recuperação de ~R$ 8 mi em créditos.</div>
+            <div class="d">
+              Contratos estratégicos (públicos/privados): negociação, governança e mitigação de riscos jurídico-financeiros em projetos regulados.<br>
+              Licitações e contratos administrativos: estratégia recursal, matriz de riscos e suporte à execução contratual.<br>
+              Resultados: ~R$ 150 mi/ano em contratos; preservação de ~R$ 13 mi/mês; recuperação de ~R$ 8 mi em créditos.
+            </div>
           </div>
 
           <div class="job">
             <div class="h">2007 – 2014 • Jurídico / Licitações — Engenharia & Consultoria</div>
             <div class="m">Ciclo licitatório • Contratos administrativos • Pareceres • Mitigação de riscos</div>
-            <div class="d">Ciclo licitatório completo: análise de editais, propostas, recursos/impugnações e contratação.
-              Interface com órgãos de controle e auditorias: conformidade, resposta a demandas e governança documental.
-              Eficiência e regularidade: recuperação de ~R$ 5 mi e suporte jurídico fiscal/financeiro/trabalhista.</div>
+            <div class="d">
+              Ciclo licitatório completo: análise de editais, propostas, recursos/impugnações e contratação.<br>
+              Interface com órgãos de controle e auditorias: conformidade, resposta a demandas e governança documental.<br>
+              Eficiência e regularidade: recuperação de ~R$ 5 mi e suporte jurídico fiscal/financeiro/trabalhista.
+            </div>
           </div>
         </div>
 
@@ -746,10 +766,12 @@
 
           <div class="job">
             <div class="h">Formação</div>
-            <div class="m">MBA em Gestão do Direito nas Empresas – FEA/USP
-              <div class="d">Pós-graduação em Direito Administrativo e Licitações; e Direito Civil – Faculdade de Minas
-              LL.M. em Direito de Negócios – Faculdades Metropolitanas Unidas de São Paulo
-              Graduação em Direito – Universidade Cidade de São Paulo./div>
+            <div class="m">MBA em Gestão do Direito nas Empresas – FEA/USP (em curso)</div>
+            <div class="d">
+              Pós-graduação em Direito Administrativo e Licitações; Direito Civil – Faculdade de Minas<br>
+              LL.M. em Direito de Negócios – FMU (SP)<br>
+              Graduação em Direito – Universidade Cidade de São Paulo
+            </div>
           </div>
         </div>
       </div>
@@ -768,15 +790,12 @@
         <div class="card">
           <h3 style="margin:0; font-size:14px;">Canais</h3>
           <div style="margin-top:10px; color:var(--muted); font-size:13px; line-height:1.8;">
-            <!-- TROQUE para os contatos oficiais -->
             <div><strong>E-mail:</strong> <a href="mailto:aguiar.higor@gmail.com">aguiar.higor@gmail.com</a></div>
             <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/adv-higor-aguiar" target="_blank" rel="noreferrer">/adv-higor-aguiar</a></div>
-            <!-- WhatsApp: troque 5511988610446 -->
             <div><strong>WhatsApp:</strong> <a id="waLink" href="https://wa.me/5511988610446" target="_blank" rel="noreferrer">Abrir conversa</a></div>
           </div>
 
           <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn primary" href="#" id="cvBottom" target="_blank" rel="noreferrer">Baixar CV (PDF)</a>
             <button class="btn" id="copyBtn" type="button">Copiar mensagem</button>
           </div>
         </div>
@@ -784,20 +803,23 @@
         <div class="card">
           <h3 style="margin:0; font-size:14px;">Mensagem</h3>
           <div class="copyBox" id="copyText">
-            Advogado com perfil multidisciplinar e com forte atuação em contratos complexos públicos e privados,
-            licitações e gestão jurídica estratégica, atuando em ambientes regulados como Business Partner no apoio
-            a decisões executivas, com foco na mitigação de riscos e segurança jurídica às operações da organização. 
+            Consultoria e assessoria empresarial com atuação em contratos complexos, licitações e governança, em ambientes regulados.
+            Suporte estratégico à tomada de decisão executiva, com foco em mitigação de riscos, conformidade e previsibilidade na execução contratual.
           </div>
           <div style="margin-top:12px; color:var(--muted); font-size:12px;">
-            Para maiores detalhes entre em contato.
+            Para maiores detalhes, entre em contato.
           </div>
         </div>
       </div>
     </section>
 
     <div class="footer">
-      <div>© <span id="y"></span> Higor Aguiar </div>
+      <div>© <span id="y"></span> Higor Aguiar</div>
       <div>Executive Portfolio</div>
+    </div>
+
+    <div class="oabNote">
+      Conteúdo institucional e informativo, sem promessa de resultados. Atuação conforme regras de publicidade da OAB.
     </div>
   </main>
 
@@ -832,6 +854,7 @@
     // Copiar mensagem
     const copyBtn = document.getElementById("copyBtn");
     const copyText = document.getElementById("copyText").innerText.trim();
+
     copyBtn.addEventListener("click", async () => {
       try{
         await navigator.clipboard.writeText(copyText);
@@ -841,15 +864,6 @@
         alert("Não foi possível copiar automaticamente. Selecione o texto e copie manualmente.");
       }
     });
-
-    // (Opcional) link do CV em dois botões
-    // 1) Suba o PDF no repositório com o nome "cv-higor.pdf"
-    // 2) Troque o href abaixo para "cv-higor.pdf"
-    const cvHref = "#"; // ex: "cv-higor.pdf"
-    document.getElementById("cvTop").href = cvHref;
-    document.getElementById("cvBottom").href = cvHref;
-
-    // WhatsApp: troque o número nos links do HTML (wa.me/55...)
   </script>
 </body>
 </html>
