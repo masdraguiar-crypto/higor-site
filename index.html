@@ -53,32 +53,48 @@
     /* Topbar */
     .topbar{
       position: sticky; top: 0; z-index: 50;
-      background: rgba(255,255,255,.82);
+      background: rgba(255,255,255,.86);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(15,23,42,.10);
     }
     .topbar .inner{
       max-width: var(--max);
       margin:0 auto;
-      padding: 14px 18px;
+      padding: 12px 18px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap: 12px;
+      gap: 14px;
+      min-height: 112px; /* ✅ HEADER MAIS ALTO */
     }
 
-    /* LOGO (ocupando melhor o header) */
+    /* Brand / Logo */
     .brand{
       display:flex;
       align-items:center;
       text-decoration:none;
-      min-width: 260px;
+      min-width: 420px; /* ✅ ocupa mais espaço no header */
+      flex: 1 1 420px;
+    }
+
+    /* ✅ CAIXA DO LOGO: aumenta e faz zoom elegante */
+    .logoFrame{
+      width: min(520px, 44vw); /* ✅ cresce junto com a tela */
+      height: 96px;          /* ✅ logo legível */
+      display:flex;
+      align-items:center;
+      overflow:hidden;
     }
     .logoFull{
-      height: 64px; /* ajuste aqui se quiser maior (72/80) */
-      width: auto;
+      width: 100%;
+      height: 100%;
       display:block;
-      object-fit: contain;
+
+      /* ✅ “zoom” para logo vertical ficar legível */
+      object-fit: cover;
+      object-position: left center;
+      transform: scale(1.12); /* ✅ ajuste fino do zoom */
+      transform-origin: left center;
     }
 
     nav{ display:none; gap: 10px; align-items:center; }
@@ -88,6 +104,7 @@
       color: var(--muted);
       padding: 8px 10px;
       border-radius: 999px;
+      white-space: nowrap;
     }
     nav a:hover{ background: rgba(2,6,23,.06); color: var(--ink); }
 
@@ -201,7 +218,7 @@
       padding: 16px;
     }
 
-    /* Profile card */
+    /* Profile */
     .profile{
       display:flex; gap: 14px; align-items:center;
       padding: 14px;
@@ -224,11 +241,10 @@
       font-size: 12px;
     }
     .avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
-
     .p1{ font-weight: 700; }
     .p2{ margin-top: 4px; font-size: 12px; color: var(--muted); line-height: 1.4; }
 
-    /* Metrics banner (agora suporta 3/4/5 cards sem quebrar) */
+    /* Metrics */
     .metricsBanner{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
@@ -282,7 +298,7 @@
 
     .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
 
-    /* Tags com ícones */
+    /* Tags */
     .pillGrid{
       display:flex; flex-wrap:wrap; gap: 10px;
       margin-top: 8px;
@@ -300,7 +316,7 @@
     .ico{ width:16px; height:16px; display:inline-block; }
     .ico svg{ width:16px; height:16px; stroke: var(--navy); opacity: .78; }
 
-    /* Cases + accordion */
+    /* Cases */
     .cases{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .case h3{ margin:0; font-size: 14px; }
     .case p{ margin: 8px 0 0; font-size: 13px; line-height: 1.65; color: var(--muted); }
@@ -328,7 +344,6 @@
       opacity:.9;
     }
     details[open] .chev{ transform: rotate(225deg); }
-
     .case-bullets{
       margin: 10px 0 0;
       padding-left: 18px;
@@ -367,7 +382,7 @@
     .job .m{ margin-top: 5px; font-size: 12px; color: var(--muted); line-height: 1.5; }
     .job .d{ margin-top: 6px; font-size: 12px; color: var(--muted); line-height: 1.55; }
 
-    /* Contato - Mensagem (corrigido premium sem alterar o conteúdo) */
+    /* Contato - Mensagem */
     .copyBox{
       margin-top: 10px;
       padding: 14px;
@@ -434,6 +449,8 @@
       .grid2, .cases, .tracks{ grid-template-columns: 1fr; }
       .floatCta{ right: 12px; bottom: 12px; }
       .copyBox{ max-width: 100%; }
+      .brand{ min-width: 0; flex: 1 1 auto; }
+      .logoFrame{ width: min(560px, 68vw); height: 92px; }
     }
   </style>
 </head>
@@ -443,8 +460,9 @@
   <div class="topbar">
     <div class="inner">
       <a class="brand" href="#top" aria-label="Voltar ao topo">
-        <!-- Coloque o arquivo DesignHigor.png na mesma pasta do HTML -->
-        <img class="logoFull" src="DesignHigor.png" alt="Higor R. Aguiar" />
+        <div class="logoFrame">
+          <img class="logoFull" src="DesignHigor.png" alt="Higor R. Aguiar" />
+        </div>
       </a>
 
       <nav>
@@ -497,7 +515,6 @@
         <div class="card">
           <div class="profile">
             <div class="avatar">
-              <!-- Coloque foto.jpg na mesma pasta (ou troque o nome do arquivo) -->
               <img src="foto.jpg" alt="Higor Aguiar" />
             </div>
             <div>
@@ -516,7 +533,7 @@
         </div>
       </div>
 
-      <!-- METRICS BANNER -->
+      <!-- METRICS -->
       <div id="metricas" class="metricsBanner">
         <div class="metric">
           <div class="big">~R$ 150 milhões/ano <span class="tag">Governança</span></div>
@@ -589,7 +606,6 @@
           <p><strong>Decisão:</strong> Estratégia jurídica para recursos/impugnações, governança documental e cláusulas críticas.</p>
           <p><strong>Impacto:</strong> Redução de exposição e aumento de previsibilidade na execução.</p>
 
-          <!-- CORRIGIDO: apenas 1 details (sem duplicar) -->
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
             <ul class="case-bullets">
@@ -671,7 +687,7 @@
 
           <span class="pill"><span class="ico">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 21h18"/><path d="M6 21V7l6-4 6 4v14"/><path d="M9 21v-8h6v8"/></svg>
-          </span>Licitações</span>
+          </span>Licitações • Lei 14.133/21 • 13.303/16</span>
 
           <span class="pill"><span class="ico">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3l8 4v6c0 5-3 9-8 9s-8-4-8-9V7l8-4Z"/><path d="M9 12l2 2 4-5"/></svg>
@@ -730,7 +746,7 @@
             <div class="h">2007 – 2014 • Jurídico / Licitações — Engenharia & Consultoria</div>
             <div class="m">Ciclo licitatório • Contratos administrativos • Pareceres • Mitigação de riscos</div>
             <div class="d">
-              Análise de editais, propostas, recursos/impugnações e contratação.<br>
+              Ciclo licitatório completo: análise de editais, propostas, recursos/impugnações e contratação.<br>
               Interface com órgãos de controle e auditorias: conformidade, resposta a demandas e governança documental.<br>
               Eficiência e regularidade: recuperação de ~R$ 5 mi e suporte jurídico fiscal/financeiro/trabalhista.
             </div>
@@ -756,9 +772,7 @@
             <div class="m">MBA em Gestão do Direito nas Empresas – FEA/USP</div>
             <div class="d">
               Pós-graduação em Direito Administrativo e Licitações; e Direito Civil – Faculdade de Minas<br>
-                <div class="d">
               LL.M. em Direito de Negócios – Faculdades Metropolitanas Unidas de São Paulo<br>
-                    <div class="d">
               Graduação em Direito – Universidade Cidade de São Paulo
             </div>
           </div>
@@ -791,14 +805,11 @@
 
         <div class="card">
           <h3 style="margin:0; font-size:14px;">Mensagem</h3>
-
-          <!-- TEXTO MANTIDO (sem alterar conteúdo) -->
           <div class="copyBox" id="copyText">
             Advogado com perfil multidisciplinar e com forte atuação em contratos complexos públicos e privados,
             licitações e gestão jurídica estratégica, atuando em ambientes regulados como Business Partner no apoio
             a decisões executivas, com foco na mitigação de riscos e segurança jurídica às operações da organização.
           </div>
-
           <div style="margin-top:12px; color:var(--muted); font-size:12px;">
             Para maiores detalhes entre em contato.
           </div>
@@ -819,10 +830,8 @@
   </div>
 
   <script>
-    // Ano
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    // Reveal on load + on scroll
     const els = [...document.querySelectorAll(".reveal")];
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("in"); });
@@ -840,7 +849,6 @@
       }), 80);
     });
 
-    // Copiar mensagem (pega o TEXTO do bloco, mantendo igual ao exibido)
     const copyBtn = document.getElementById("copyBtn");
     copyBtn.addEventListener("click", async () => {
       try{
