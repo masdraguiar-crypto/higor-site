@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Higor R. Aguiar | Consultoria & Assessoria Empresarial</title>
-  <meta name="description" content="Consultoria e assessoria empresarial. Gestão e soluções jurídicas. Licitações e Contratos Administrativos. Integridade em negócios públicos e privados." />
+  <title>Higor Aguiar | Consultor Jurídico • Law Business Partner</title>
+  <meta name="description" content="Portfólio executivo: Empresarial, Contratos, Licitações, Governança, Compliance e gestão de riscos. Business Partner para decisões C-level." />
   <meta name="theme-color" content="#0b1220" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -27,7 +27,9 @@
       --accent:#0f766e;
       --accentSoft: rgba(15,118,110,.12);
 
-      --gold:#c7a76c;
+      --gold:#c7a76c; /* detalhe metálico discreto */
+      --goldSoft: rgba(199,167,108,.12);
+
       --max: 1120px;
     }
 
@@ -38,21 +40,18 @@
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(980px 560px at 20% 8%, rgba(15,118,110,.10), transparent 60%),
-        radial-gradient(900px 520px at 90% 12%, rgba(11,18,32,.08), transparent 55%),
+        radial-gradient(980px 560px at 20% 8%, rgba(15,118,110,.08), transparent 60%),
+        radial-gradient(900px 520px at 90% 12%, rgba(11,18,32,.07), transparent 55%),
         linear-gradient(180deg, #f8fafc 0%, #f3f4f6 55%, #f8fafc 100%);
     }
 
     a{ color: inherit; }
     .wrap{ max-width: var(--max); margin:0 auto; padding: 22px 18px 74px; }
 
-    /* TOPBAR (premium + fundo) */
+    /* Topbar */
     .topbar{
       position: sticky; top: 0; z-index: 50;
-      background:
-        radial-gradient(720px 220px at 12% 30%, rgba(199,167,108,.12), transparent 60%),
-        radial-gradient(520px 260px at 92% 40%, rgba(15,118,110,.10), transparent 62%),
-        rgba(248,250,252,.82);
+      background: rgba(248,250,252,.85);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
@@ -66,22 +65,27 @@
       gap: 12px;
     }
 
-    /* Brand com logo grande e legível */
-    .brand{
-      display:flex;
-      align-items:center;
-      gap: 14px;
-      min-width: 360px;
+    /* BRAND (voltar como antes: HA + nome + subtítulo) */
+    .brand{ display:flex; align-items:center; gap: 12px; min-width: 320px; }
+    .mark{
+      width:46px; height:46px; border-radius: 999px;
+      background:
+        radial-gradient(18px 18px at 30% 30%, rgba(15,118,110,.16), transparent 60%),
+        radial-gradient(20px 20px at 70% 70%, rgba(11,18,32,.12), transparent 60%),
+        rgba(255,255,255,.92);
+      border: 1px solid var(--line);
+      display:grid; place-items:center;
+      font-weight: 700;
+      letter-spacing:.6px;
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      box-shadow: 0 10px 22px rgba(2,6,23,.10);
+      flex: 0 0 46px;
     }
-    .brandLogo{
-      height: 64px;          /* AUMENTA AQUI se quiser mais */
-      width: auto;
-      display:block;
-      object-fit: contain;   /* não corta */
-      filter: drop-shadow(0 10px 18px rgba(2,6,23,.10));
-    }
+    .brand .name{ font-weight: 800; line-height: 1.05; }
+    .brand .role{ font-size: 12px; color: var(--muted); margin-top: 2px; }
 
-    nav{ display:none; gap: 12px; align-items:center; }
+    nav{ display:none; gap: 10px; align-items:center; }
     nav a{
       text-decoration:none;
       font-size: 13px;
@@ -95,37 +99,38 @@
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       gap: 10px;
-      padding: 10px 13px;
+      padding: 10px 14px;
       border-radius: 999px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,.90);
+      background: rgba(255,255,255,.92);
       box-shadow: 0 8px 20px rgba(2,6,23,.08);
       text-decoration:none;
       font-size: 13px;
       transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
       cursor:pointer;
       white-space: nowrap;
+      color: var(--navy);
+      font-weight: 600;
     }
     .btn:hover{ transform: translateY(-1px); box-shadow: 0 12px 28px rgba(2,6,23,.10); }
-
     .btn.primary{
-      background: linear-gradient(135deg, rgba(11,18,32,.92), rgba(11,18,32,.92));
+      background: linear-gradient(135deg, rgba(11,18,32,.95), rgba(11,18,32,.95));
       color: #fff;
       border-color: rgba(11,18,32,.18);
       box-shadow: 0 16px 32px rgba(2,6,23,.18);
     }
     .btn.primary:hover{ box-shadow: 0 18px 38px rgba(2,6,23,.22); }
 
-    /* Hero */
+    /* Hero premium */
     .heroShell{
       border: 1px solid var(--softLine);
       border-radius: 26px;
       overflow:hidden;
       box-shadow: var(--shadow);
       background:
-        radial-gradient(700px 360px at 15% 18%, rgba(15,118,110,.10), transparent 60%),
-        radial-gradient(760px 420px at 88% 22%, rgba(11,18,32,.07), transparent 58%),
-        linear-gradient(180deg, rgba(255,255,255,.90) 0%, rgba(255,255,255,.76) 100%);
+        radial-gradient(700px 360px at 15% 18%, rgba(15,118,110,.09), transparent 60%),
+        radial-gradient(760px 420px at 88% 22%, rgba(11,18,32,.06), transparent 58%),
+        linear-gradient(180deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.78) 100%);
       position: relative;
     }
     .heroShell:before{
@@ -135,15 +140,15 @@
         linear-gradient(to right, rgba(15,23,42,.06) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(15,23,42,.06) 1px, transparent 1px);
       background-size: 44px 44px;
-      opacity: .16;
+      opacity: .14;
       pointer-events:none;
-      mask-image: radial-gradient(520px 260px at 25% 18%, black 0%, transparent 60%);
+      mask-image: radial-gradient(520px 280px at 25% 18%, black 0%, transparent 64%);
     }
 
     .hero{
       padding: 28px 22px 18px;
       display:grid;
-      grid-template-columns: 1.2fr .8fr;
+      grid-template-columns: 1.15fr .85fr;
       gap: 16px;
       align-items: start;
       position: relative;
@@ -153,7 +158,7 @@
       font-size: 12px;
       color: var(--muted);
       border: 1px solid var(--softLine);
-      background: rgba(255,255,255,.76);
+      background: rgba(255,255,255,.78);
       padding: 8px 12px;
       border-radius: 999px;
       width: fit-content;
@@ -166,7 +171,7 @@
     h1{
       margin: 14px 0 0;
       font-family: "Playfair Display", serif;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: -.4px;
       font-size: clamp(30px, 4.1vw, 46px);
       line-height: 1.08;
@@ -176,7 +181,17 @@
       color: var(--muted);
       font-size: 16px;
       line-height: 1.75;
-      max-width: 74ch;
+      max-width: 76ch;
+    }
+    .chips{ margin-top: 18px; display:flex; flex-wrap:wrap; gap: 10px; }
+    .chip{
+      font-size: 12px;
+      color: var(--muted);
+      background: rgba(255,255,255,.80);
+      border: 1px solid var(--softLine);
+      padding: 9px 12px;
+      border-radius: 999px;
+      white-space: nowrap;
     }
     .dividerGold{
       height: 1px;
@@ -187,7 +202,7 @@
 
     .card{
       border: 1px solid var(--softLine);
-      background: rgba(255,255,255,.88);
+      background: rgba(255,255,255,.90);
       border-radius: var(--radius);
       box-shadow: var(--shadow2);
       padding: 16px;
@@ -199,27 +214,28 @@
       padding: 14px;
       border: 1px solid var(--softLine);
       border-radius: 18px;
-      background: rgba(255,255,255,.72);
+      background: rgba(255,255,255,.78);
     }
     .avatar{
-      width: 92px; height: 112px;
+      width: 92px; height: 110px;
       border-radius: 18px;
       border: 1px solid var(--softLine);
       overflow:hidden;
       flex: 0 0 92px;
       background:
-        radial-gradient(40px 40px at 30% 25%, rgba(15,118,110,.18), transparent 60%),
+        radial-gradient(40px 40px at 30% 25%, rgba(15,118,110,.16), transparent 60%),
         radial-gradient(42px 42px at 70% 70%, rgba(11,18,32,.10), transparent 60%),
-        rgba(255,255,255,.70);
+        rgba(255,255,255,.78);
       display:grid; place-items:center;
       color: var(--muted);
       font-size: 12px;
     }
     .avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
-    .p1{ font-weight: 700; }
+
+    .p1{ font-weight: 800; }
     .p2{ margin-top: 4px; font-size: 12px; color: var(--muted); line-height: 1.4; }
 
-    /* Metrics */
+    /* Metrics banner */
     .metricsBanner{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
@@ -228,17 +244,16 @@
     }
     .metric{
       border: 1px solid var(--softLine);
-      background: rgba(255,255,255,.74);
+      background: rgba(255,255,255,.80);
       border-radius: 18px;
       padding: 14px;
       box-shadow: 0 10px 20px rgba(2,6,23,.06);
     }
     .metric .big{
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: -.3px;
       font-size: 18px;
       display:flex; align-items:baseline; gap: 8px;
-      flex-wrap: wrap;
     }
     .metric .big .tag{
       font-size: 11px;
@@ -247,7 +262,8 @@
       padding: 4px 8px;
       border-radius: 999px;
       background: rgba(199,167,108,.10);
-      font-weight: 700;
+      font-weight: 800;
+      white-space: nowrap;
     }
     .metric .small{ margin-top: 8px; font-size: 12px; color: var(--muted); line-height: 1.45; }
 
@@ -259,8 +275,8 @@
     .sectionTitle h2{
       margin:0;
       font-family: "Playfair Display", serif;
-      font-weight: 600;
-      font-size: 20px;
+      font-weight: 700;
+      font-size: 22px;
       letter-spacing: -.2px;
     }
     .sectionTitle p{
@@ -268,16 +284,15 @@
       font-size: 13px;
       color: var(--muted);
       line-height: 1.5;
-      max-width: 82ch;
+      max-width: 84ch;
     }
 
     .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
-    /* Cases + accordion */
+    /* CASES */
     .cases{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .case h3{ margin:0; font-size: 14px; }
     .case p{ margin: 8px 0 0; font-size: 13px; line-height: 1.65; color: var(--muted); }
-
     details{
       margin-top: 10px;
       border-top: 1px solid rgba(15,23,42,.08);
@@ -288,7 +303,7 @@
       list-style:none;
       font-size: 13px;
       color: var(--navy);
-      font-weight: 600;
+      font-weight: 700;
       display:flex; align-items:center; justify-content:space-between;
       gap: 10px;
     }
@@ -300,48 +315,93 @@
       transform: rotate(45deg);
       transition: transform .18s ease;
       opacity:.9;
-      flex: 0 0 auto;
     }
     details[open] .chev{ transform: rotate(225deg); }
 
-    .case-bullets{
+    .caseBullets{
       margin: 10px 0 0;
-      padding-left: 18px;
+      padding: 0 0 0 18px;
       color: var(--muted);
       font-size: 13px;
-      line-height: 1.7;
+      line-height: 1.65;
     }
-    .case-bullets li{ margin: 6px 0; }
-    .case-bullets strong{ color: var(--ink); }
+    .caseBullets li{ margin: 6px 0; }
 
-    /* Competências (somente 1 lugar) */
-    .pillGrid{
+    /* COMPETÊNCIAS - versão clean/visual */
+    .skillsGrid{
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
     }
-    .cap{
+    .skillCard{
+      padding: 18px;
+      border-radius: 20px;
       border: 1px solid var(--softLine);
-      background: rgba(255,255,255,.84);
-      border-radius: 18px;
-      padding: 14px;
+      background: rgba(255,255,255,.92);
       box-shadow: 0 10px 22px rgba(2,6,23,.06);
+      position: relative;
+      overflow:hidden;
     }
-    .cap h3{
-      margin:0;
+    .skillCard:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(520px 220px at 15% 0%, rgba(199,167,108,.14), transparent 55%),
+        radial-gradient(520px 220px at 85% 0%, rgba(15,118,110,.12), transparent 55%);
+      opacity:.7;
+      pointer-events:none;
+      mask-image: linear-gradient(180deg, black 0%, transparent 70%);
+    }
+    .skillHead{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      position: relative;
+    }
+    .skillTitle{
+      font-weight: 900;
       font-size: 14px;
-      letter-spacing: -.1px;
+      color: var(--navy);
+      margin:0;
     }
-    .cap ul{
-      margin: 10px 0 0;
-      padding-left: 18px;
+    .skillTag{
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--gold);
+      border: 1px solid rgba(199,167,108,.40);
+      background: rgba(199,167,108,.10);
+      padding: 5px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .skillList{
+      margin: 12px 0 0;
+      padding: 0;
+      list-style:none;
       color: var(--muted);
       font-size: 13px;
-      line-height: 1.7;
+      line-height: 1.65;
+      position: relative;
     }
-    .cap li{ margin: 6px 0; }
+    .skillList li{
+      display:flex;
+      gap: 10px;
+      padding: 8px 0;
+      border-top: 1px dashed rgba(15,23,42,.10);
+    }
+    .skillList li:first-child{ border-top:none; padding-top: 0; }
+    .bullet{
+      width: 10px; height: 10px;
+      border-radius: 999px;
+      background: rgba(15,118,110,.16);
+      border: 1px solid rgba(15,118,110,.30);
+      margin-top: 6px;
+      flex: 0 0 10px;
+    }
 
-    /* Experiência */
+    /* Experiência em trilhas */
     .tracks{
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -351,14 +411,14 @@
       display:flex; align-items:center; justify-content:space-between; gap: 10px;
       margin-bottom: 10px;
     }
-    .trackTitle .t{ font-weight: 800; }
+    .trackTitle .t{ font-weight: 900; }
     .badge{
       font-size: 11px;
       border: 1px solid rgba(11,18,32,.16);
       padding: 5px 9px;
       border-radius: 999px;
       color: var(--muted);
-      background: rgba(255,255,255,.70);
+      background: rgba(255,255,255,.80);
       white-space:nowrap;
     }
     .job{
@@ -366,9 +426,9 @@
       border-top: 1px solid rgba(15,23,42,.08);
     }
     .job:first-child{ border-top:none; padding-top: 0; }
-    .job .h{ font-weight: 700; font-size: 13px; }
+    .job .h{ font-weight: 800; font-size: 13px; }
     .job .m{ margin-top: 5px; font-size: 12px; color: var(--muted); line-height: 1.5; }
-    .job .d{ margin-top: 6px; font-size: 12px; color: var(--muted); line-height: 1.6; }
+    .job .d{ margin-top: 6px; font-size: 12px; color: var(--muted); line-height: 1.55; }
 
     /* Contato */
     .copyBox{
@@ -376,12 +436,11 @@
       padding: 14px;
       border-radius: 16px;
       border: 1px solid var(--softLine);
-      background: rgba(255,255,255,.76);
+      background: rgba(255,255,255,.80);
       color: var(--muted);
       line-height: 1.7;
       font-size: 13px;
-      box-shadow: 0 10px 20px rgba(2,6,23,.06) inset;
-      overflow-wrap: anywhere; /* evita “texto distorcido” */
+      white-space: normal;
       word-break: normal;
     }
     .footer{
@@ -407,7 +466,10 @@
       gap: 10px;
     }
     .floatCta .btn{ box-shadow: 0 18px 38px rgba(2,6,23,.18); }
-    .btn.whats{ background: rgba(255,255,255,.92); }
+    .btn.whats{
+      background: rgba(255,255,255,.95);
+      color: var(--navy);
+    }
 
     /* Animations */
     .reveal{
@@ -427,11 +489,9 @@
     @media (max-width: 980px){
       .hero{ grid-template-columns: 1fr; }
       .metricsBanner{ grid-template-columns: 1fr; }
-      .grid2, .cases, .tracks{ grid-template-columns: 1fr; }
-      .pillGrid{ grid-template-columns: 1fr; }
+      .grid2, .cases, .tracks, .skillsGrid{ grid-template-columns: 1fr; }
       .floatCta{ right: 12px; bottom: 12px; }
-      .brand{ min-width: unset; }
-      .brandLogo{ height: 54px; }
+      .brand{ min-width: auto; }
     }
   </style>
 </head>
@@ -441,24 +501,28 @@
   <div class="topbar">
     <div class="inner">
       <div class="brand">
-        <!-- LOGO GRANDE -->
-        <img class="brandLogo" src="DesignHigor.png" alt="Higor R. Aguiar — Consultoria e Assessoria Empresarial" />
+        <div class="mark">HA</div>
+        <div>
+          <div class="name">Higor Aguiar</div>
+          <div class="role">Consultor Jurídico • Law Business Partner</div>
+        </div>
       </div>
 
       <nav>
         <a href="#proposta">Proposta</a>
         <a href="#metricas">Impacto</a>
         <a href="#cases">Cases</a>
-        <a href="#competencias">Competências</a>
+        <a href="#expertise">Competências</a>
         <a href="#experiencia">Experiência</a>
         <a href="#contato">Contato</a>
       </nav>
 
       <div class="actions">
-        <!-- ÚNICO BOTÃO NO TOPO (LinkedIn recomendações) -->
-        <a class="btn primary" href="https://www.linkedin.com/in/adv-higor-aguiar/details/recommendations/?detailScreenTabIndex=0"
+        <!-- ÚNICO BOTÃO (conforme pedido) -->
+        <a class="btn primary"
+           href="https://www.linkedin.com/in/adv-higor-aguiar/details/recommendations/?detailScreenTabIndex=0"
            target="_blank" rel="noreferrer">
-          Ver recomendações (LinkedIn)
+           Ver Recomendações no LinkedIn
         </a>
       </div>
     </div>
@@ -483,6 +547,13 @@
 
           <div class="dividerGold"></div>
 
+          <div class="chips">
+            <span class="chip">Contratos Empresariais Complexos</span>
+            <span class="chip">Licitações e Contratos Administrativos</span>
+            <span class="chip">Claims • Reequilíbrio econômico-financeiro</span>
+            <span class="chip">Governança • Compliance • LGPD</span>
+          </div>
+
           <div style="display:flex; gap:10px; margin-top:18px; flex-wrap:wrap">
             <a class="btn primary" href="#cases">Ver Cases de Sucesso</a>
             <a class="btn" href="#contato">Contato</a>
@@ -498,14 +569,14 @@
               <div class="p1">Executive Portfolio</div>
               <div class="p2">Consultor Jurídico • Law Business Partner</div>
               <div style="margin-top:10px; font-size:12px; color:var(--muted); line-height:1.5;">
-                Consultoria e assessoria empresarial • Gestão e soluções jurídicas • Licitações e contratos administrativos
+                Empresarial • Contratos • Licitações • Governança, Compliance e Gestão de Riscos.
               </div>
             </div>
           </div>
 
           <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
             <a class="btn" href="#metricas">Ver métricas</a>
-            <a class="btn" href="#competencias">Competências</a>
+            <a class="btn" href="#expertise">Competências</a>
           </div>
         </div>
       </div>
@@ -519,27 +590,12 @@
 
         <div class="metric">
           <div class="big">~R$ 13 milhões/mês <span class="tag">Receita</span></div>
-          <div class="small">Suporte na incorporação M&A: identificação de contratos, celebração de aditivos (clientes, fornecedores, parceiros, colaboradores), atualização cadastral, integração pós-aquisição, alinhamento regulatório e continuidade das operações.</div>
+          <div class="small">Suporte na incorporação M&A: identificação de contratos, celebração de aditivos, atualização cadastral, integração pós aquisição, alinhamento regulatório e continuidade das operações.</div>
         </div>
 
         <div class="metric">
           <div class="big">~R$ 8 milhões <span class="tag">Eficiência</span></div>
           <div class="small">Recuperação de créditos e fortalecimento de regularidade fiscal com governança, rastreabilidade e mitigação de riscos tributários.</div>
-        </div>
-
-        <div class="metric">
-          <div class="big">~R$ 5 milhões <span class="tag">Eficiência</span></div>
-          <div class="small">Recuperação de créditos previdenciários retidos na fonte para compensação em folha de pagamento e preservação do caixa.</div>
-        </div>
-
-        <div class="metric">
-          <div class="big">~R$ 50 milhões <span class="tag">Eficiência</span></div>
-          <div class="small">Negociação sindical e acordo coletivo para continuidade de contratos de Operação Rodoviária e êxito em novas licitações.</div>
-        </div>
-
-        <div class="metric">
-          <div class="big">Ambientes regulados <span class="tag">C-Level</span></div>
-          <div class="small">Atuação próxima à alta gestão e áreas técnicas/operacionais, estruturando decisões defensáveis com governança, compliance e mitigação de risco.</div>
         </div>
       </div>
     </div>
@@ -587,10 +643,9 @@
           <p><strong>Contexto:</strong> Disputas e riscos em licitações e contratos administrativos de infraestrutura.</p>
           <p><strong>Decisão:</strong> Estratégia jurídica para recursos/impugnações, governança documental e cláusulas críticas.</p>
           <p><strong>Impacto:</strong> Redução de exposição e aumento de previsibilidade na execução.</p>
-
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
-            <ul class="case-bullets">
+            <ul class="caseBullets">
               <li><strong>Matriz de riscos e cláusulas críticas:</strong> alocação de riscos, gatilhos de revisão/reequilíbrio, governança de evidências.</li>
               <li><strong>Estratégia recursal/impugnações:</strong> tese, prazos, diligências e saneamento com foco em habilitação e competitividade.</li>
               <li><strong>Governança documental:</strong> trilha de decisões, registros e controles para auditoria/órgãos de controle.</li>
@@ -600,13 +655,12 @@
 
         <div class="card case">
           <h3>Integração e continuidade operacional</h3>
-          <p><strong>Contexto:</strong> Mudanças organizacionais e riscos de interrupção contratual/regulatória.</p>
-          <p><strong>Decisão:</strong> Plano jurídico de transição, controles e renegociação de cláusulas sensíveis.</p>
-          <p><strong>Impacto:</strong> Preservação de receitas e estabilidade da operação.</p>
-
+          <p><strong>Contexto:</strong> mudanças organizacionais e riscos de interrupção contratual/regulatória.</p>
+          <p><strong>Decisão:</strong> plano jurídico de transição, controles e renegociação de cláusulas sensíveis.</p>
+          <p><strong>Impacto:</strong> preservação de receitas e estabilidade da operação.</p>
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
-            <ul class="case-bullets">
+            <ul class="caseBullets">
               <li><strong>Plano jurídico de transição:</strong> mapa de contratos, aditivos essenciais e cadências de comitê.</li>
               <li><strong>Controles e aprovações:</strong> pontos de risco, alçadas, fluxos e governança de decisões.</li>
               <li><strong>Renegociação de cláusulas sensíveis:</strong> continuidade, responsabilidade, garantias e compliance para estabilização.</li>
@@ -616,13 +670,12 @@
 
         <div class="card case">
           <h3>Reequilíbrio econômico-financeiro (claims)</h3>
-          <p><strong>Contexto:</strong> Mudanças de escopo, prazos e eventos externos gerando desequilíbrio.</p>
-          <p><strong>Decisão:</strong> Estruturação de pleitos com evidências, matriz de riscos e tese jurídica.</p>
-          <p><strong>Impacto:</strong> Recuperação de valores e mitigação de perdas contratuais.</p>
-
+          <p><strong>Contexto:</strong> mudanças de escopo, prazos e eventos externos gerando desequilíbrio.</p>
+          <p><strong>Decisão:</strong> estruturação de pleitos com evidências, matriz de riscos e tese jurídica.</p>
+          <p><strong>Impacto:</strong> recuperação de valores e mitigação de perdas contratuais.</p>
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
-            <ul class="case-bullets">
+            <ul class="caseBullets">
               <li><strong>Documentos de suporte:</strong> evidências, registros, medições, comunicações formais e trilha de aprovação.</li>
               <li><strong>Nexo causal e quantificação:</strong> matriz de riscos, cronograma, impactos e metodologia de cálculo.</li>
               <li><strong>Estratégia negocial:</strong> tese jurídica, cenários e condução para reduzir perda e aumentar recuperabilidade.</li>
@@ -632,13 +685,12 @@
 
         <div class="card case">
           <h3>Eficiência fiscal e regularidade</h3>
-          <p><strong>Contexto:</strong> Oportunidades de recuperação e mitigação de risco tributário.</p>
-          <p><strong>Decisão:</strong> Revisão técnica, conformidade e governança para execução segura.</p>
-          <p><strong>Impacto:</strong> Melhoria financeira com compliance e rastreabilidade.</p>
-
+          <p><strong>Contexto:</strong> oportunidades de recuperação e mitigação de risco tributário.</p>
+          <p><strong>Decisão:</strong> revisão técnica, conformidade e governança para execução segura.</p>
+          <p><strong>Impacto:</strong> melhoria financeira com compliance e rastreabilidade.</p>
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
-            <ul class="case-bullets">
+            <ul class="caseBullets">
               <li><strong>Regularidade e governança fiscal:</strong> enquadramento, retenções, controles e rastreabilidade.</li>
               <li><strong>Compliance e auditoria:</strong> lastro documental, revisão técnica e mitigação de risco tributário.</li>
               <li><strong>Recuperação de créditos:</strong> organização do dossiê e condução do processo administrativo fiscal.</li>
@@ -648,82 +700,91 @@
       </div>
     </section>
 
-    <!-- COMPETÊNCIAS (somente aqui) -->
-    <section id="competencias" class="reveal">
+    <!-- COMPETÊNCIAS (CLEAN / VISUAL) -->
+    <section id="expertise" class="reveal">
       <div class="sectionTitle">
         <div>
           <h2>Competências-chave</h2>
-          <p>Visão executiva por frentes de atuação.</p>
+          <p>Organizado por frentes — leitura executiva e visual.</p>
         </div>
       </div>
 
-      <div class="pillGrid">
-        <div class="cap">
-          <h3>1. Estratégia Jurídica & Direito Empresarial</h3>
-          <ul>
-            <li>Estruturação jurídico-corporativa de operações</li>
-            <li>Interface com alta administração e suporte à tomada de decisão</li>
-            <li>Business Partner jurídico com visão empresarial</li>
-            <li>Análise de impacto financeiro contratual e KPIs jurídicos</li>
+      <div class="skillsGrid">
+        <div class="skillCard">
+          <div class="skillHead">
+            <h3 class="skillTitle">Estratégia Jurídica & Direito Empresarial</h3>
+            <span class="skillTag">Business Partner</span>
+          </div>
+          <ul class="skillList">
+            <li><span class="bullet"></span><span>Estruturação jurídico-corporativa de operações</span></li>
+            <li><span class="bullet"></span><span>Interface com alta administração e suporte à tomada de decisão</span></li>
+            <li><span class="bullet"></span><span>Business Partner jurídico com visão empresarial</span></li>
+            <li><span class="bullet"></span><span>Análise de impacto financeiro contratual e KPIs jurídicos</span></li>
           </ul>
         </div>
 
-        <div class="cap">
-          <h3>2. Contratos Complexos, Licitações & Reequilíbrio</h3>
-          <ul>
-            <li>Redação e negociação de contratos públicos e privados</li>
-            <li>Parcerias, Consórcios, SPEs</li>
-            <li>Instrumentos pré-contratuais (NDA, MOU, LOI)</li>
-            <li>Licitações (Lei 14.133/21 e 13.303/16)</li>
-            <li>Impugnações, recursos, diligências e atuação perante Tribunais de Contas</li>
-            <li>Claims, pleitos e reequilíbrio econômico-financeiro</li>
-            <li>Matriz de riscos e preservação de contratos estratégicos</li>
+        <div class="skillCard">
+          <div class="skillHead">
+            <h3 class="skillTitle">Contratos Complexos, Licitações & Reequilíbrio</h3>
+            <span class="skillTag">Contratos</span>
+          </div>
+          <ul class="skillList">
+            <li><span class="bullet"></span><span>Redação e negociação de contratos públicos e privados</span></li>
+            <li><span class="bullet"></span><span>Parcerias, Consórcios, SPEs e instrumentos pré-contratuais (NDA, MOU, LOI)</span></li>
+            <li><span class="bullet"></span><span>Licitações (Lei 14.133/21 e 13.303/16): impugnações, recursos, diligências e Tribunais de Contas</span></li>
+            <li><span class="bullet"></span><span>Claims, pleitos e reequilíbrio econômico-financeiro • matriz de riscos</span></li>
           </ul>
         </div>
 
-        <div class="cap">
-          <h3>3. Governança, Compliance & Estrutura Societária</h3>
-          <ul>
-            <li>Governança corporativa e regularidade societária</li>
-            <li>Constituição, alteração e reorganizações societárias</li>
-            <li>M&A e integração pós-aquisição</li>
-            <li>Programa de integridade e gestão de riscos (ERM)</li>
-            <li>ESG jurídico e compliance regulatório</li>
-            <li>Due diligence estruturada</li>
-            <li>LGPD e proteção de dados</li>
+        <div class="skillCard">
+          <div class="skillHead">
+            <h3 class="skillTitle">Governança, Compliance & Estrutura Societária</h3>
+            <span class="skillTag">Governança</span>
+          </div>
+          <ul class="skillList">
+            <li><span class="bullet"></span><span>Governança corporativa e regularidade societária</span></li>
+            <li><span class="bullet"></span><span>Constituição, alteração e reorganizações societárias</span></li>
+            <li><span class="bullet"></span><span>M&A e integração pós-aquisição • due diligence estruturada</span></li>
+            <li><span class="bullet"></span><span>Programa de integridade e gestão de riscos (ERM) • LGPD</span></li>
           </ul>
         </div>
 
-        <div class="cap">
-          <h3>4. Contencioso Estratégico, Tributário & Trabalhista</h3>
-          <ul>
-            <li>Contencioso administrativo e judicial estratégico</li>
-            <li>Interface com MP, TCE, TCU e órgãos reguladores</li>
-            <li>Gestão de contingências (provável, possível, remoto)</li>
-            <li>Recuperação de créditos fiscais e benefícios tributários</li>
-            <li>Negociações sindicais e prevenção de passivos trabalhistas</li>
+        <div class="skillCard">
+          <div class="skillHead">
+            <h3 class="skillTitle">Contencioso Estratégico, Tributário & Trabalhista</h3>
+            <span class="skillTag">Contencioso</span>
+          </div>
+          <ul class="skillList">
+            <li><span class="bullet"></span><span>Contencioso administrativo e judicial estratégico</span></li>
+            <li><span class="bullet"></span><span>Interface com MP, TCE, TCU e órgãos reguladores</span></li>
+            <li><span class="bullet"></span><span>Gestão de contingências (provável, possível, remoto)</span></li>
+            <li><span class="bullet"></span><span>Recuperação de créditos fiscais • negociações sindicais e prevenção de passivos</span></li>
           </ul>
         </div>
 
-        <div class="cap">
-          <h3>5. Liderança & Gestão Jurídica</h3>
-          <ul>
-            <li>Coordenação e desenvolvimento de equipe jurídica</li>
-            <li>Planejamento e priorização de demandas</li>
-            <li>Governança contratual</li>
-            <li>Integração transversal com áreas técnicas e administrativas</li>
-            <li>Perfil analítico, hands-on e orientado à solução</li>
+        <div class="skillCard">
+          <div class="skillHead">
+            <h3 class="skillTitle">Liderança & Gestão Jurídica</h3>
+            <span class="skillTag">Gestão</span>
+          </div>
+          <ul class="skillList">
+            <li><span class="bullet"></span><span>Coordenação e desenvolvimento de equipe jurídica</span></li>
+            <li><span class="bullet"></span><span>Planejamento e priorização de demandas</span></li>
+            <li><span class="bullet"></span><span>Governança contratual e integração transversal</span></li>
+            <li><span class="bullet"></span><span>Perfil analítico, hands-on e orientado à solução</span></li>
           </ul>
         </div>
 
-        <div class="cap">
-          <h3>6. Inovação & Transformação Digital Jurídica</h3>
-          <ul>
-            <li>Digitalização e gestão do ciclo de vida contratual (CLM)</li>
-            <li>Automação de fluxos jurídicos</li>
-            <li>Gestão documental digital</li>
-            <li>Modelagem de riscos em operações financeiras</li>
-            <li>Estruturação jurídica para financiamentos</li>
+        <div class="skillCard">
+          <div class="skillHead">
+            <h3 class="skillTitle">Inovação & Transformação Digital Jurídica</h3>
+            <span class="skillTag">Digital</span>
+          </div>
+          <ul class="skillList">
+            <li><span class="bullet"></span><span>Digitalização e gestão do ciclo de vida contratual (CLM)</span></li>
+            <li><span class="bullet"></span><span>Automação de fluxos e gestão documental digital</span></li>
+            <li><span class="bullet"></span><span>Modelagem de riscos em operações financeiras</span></li>
+            <li><span class="bullet"></span><span>Estruturação jurídica para financiamentos</span></li>
           </ul>
         </div>
       </div>
@@ -734,7 +795,7 @@
       <div class="sectionTitle">
         <div>
           <h2>Experiência</h2>
-          <p>Trilha.</p>
+          <p>Trilhas organizadas por atuação.</p>
         </div>
       </div>
 
@@ -749,8 +810,8 @@
             <div class="h">2015 – 2025 • Senior Legal Counsel / Jurídico Corporativo — Multinacional (Infraestrutura)</div>
             <div class="m">Contratos complexos • Licitações • Governança • Risco • Interface com Diretoria</div>
             <div class="d">
-              Contratos estratégicos (públicos/privados): negociação, governança e mitigação de riscos jurídico-financeiros em projetos regulados.
-              Licitações e contratos administrativos: estratégia recursal, matriz de riscos e suporte à execução contratual.
+              Contratos estratégicos (públicos/privados): negociação, governança e mitigação de riscos jurídico-financeiros em projetos regulados.<br>
+              Licitações e contratos administrativos: estratégia recursal, matriz de riscos e suporte à execução contratual.<br>
               Resultados relevantes: ~R$ 150 mi/ano em contratos; preservação de ~R$ 13 mi/mês; recuperação de ~R$ 8 mi em créditos.
             </div>
           </div>
@@ -759,8 +820,8 @@
             <div class="h">2007 – 2014 • Jurídico / Licitações — Engenharia & Consultoria</div>
             <div class="m">Ciclo licitatório • Contratos administrativos • Pareceres • Mitigação de riscos</div>
             <div class="d">
-              Ciclo licitatório completo: análise de editais, propostas, recursos/impugnações e contratação.
-              Interface com órgãos de controle e auditorias: conformidade, resposta a demandas e governança documental.
+              Ciclo licitatório completo: análise de editais, propostas, recursos/impugnações e contratação.<br>
+              Interface com órgãos de controle e auditorias: conformidade, resposta a demandas e governança documental.<br>
               Eficiência e regularidade: recuperação de ~R$ 5 mi e suporte jurídico fiscal/financeiro/trabalhista.
             </div>
           </div>
@@ -775,16 +836,14 @@
           <div class="job">
             <div class="h">2012 – 2020 • Advogado Consultor — Órgão Público (SP)</div>
             <div class="m">Comissões de licitação • Pareceres • Interface com órgãos de controle</div>
-            <div class="d">
-              <strong>Nota:</strong> atuação concomitante (consultoria/participação em comissões), reforçando expertise em ambientes regulados.
-            </div>
+            <div class="d"><strong>Nota:</strong> atuação concomitante (consultoria/participação em comissões), reforçando expertise em ambientes regulados.</div>
           </div>
 
           <div class="job">
             <div class="h">Formação</div>
             <div class="d">
-              MBA em Gestão do Direito nas Empresas – FEA/USP<br>
-              Pós-graduação em Direito Administrativo e Licitações; Direito Civil – Faculdade de Minas<br>
+              MBA em Gestão do Direito nas Empresas – FEA/USP (em curso, 2026)<br>
+              Pós-graduação em Direito Administrativo e Licitações; e Direito Civil – Faculdade de Minas<br>
               LL.M. em Direito de Negócios – FMU (SP)<br>
               Graduação em Direito – Universidade Cidade de São Paulo
             </div>
@@ -798,7 +857,7 @@
       <div class="sectionTitle">
         <div>
           <h2>Contato</h2>
-          <p>E-mail, LinkedIn/WhatsApp.</p>
+          <p>E-mail, LinkedIn e WhatsApp.</p>
         </div>
       </div>
 
@@ -813,15 +872,21 @@
 
           <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
             <button class="btn" id="copyBtn" type="button">Copiar mensagem</button>
+            <a class="btn primary"
+               href="https://www.linkedin.com/in/adv-higor-aguiar/details/recommendations/?detailScreenTabIndex=0"
+               target="_blank" rel="noreferrer">
+              Ver Recomendações no LinkedIn
+            </a>
           </div>
         </div>
 
         <div class="card">
           <h3 style="margin:0; font-size:14px;">Mensagem</h3>
+          <!-- conteúdo mantido, apenas correção de layout/fluxo -->
           <div class="copyBox" id="copyText">
             Advogado com perfil multidisciplinar e com forte atuação em contratos complexos públicos e privados,
-            licitações e gestão jurídica estratégica, atuando em ambientes regulados como Business Partner no apoio a decisões
-            executivas, com foco na mitigação de riscos e segurança jurídica às operações da organização.
+            licitações e gestão jurídica estratégica, atuando em ambientes regulados como Business Partner no apoio
+            a decisões executivas, com foco na mitigação de riscos e segurança jurídica às operações da organização.
           </div>
           <div style="margin-top:12px; color:var(--muted); font-size:12px;">
             Para maiores detalhes entre em contato.
@@ -831,13 +896,14 @@
     </section>
 
     <div class="footer">
-      <div>© <span id="y"></span> Higor Aguiar </div>
+      <div>© <span id="y"></span> Higor Aguiar</div>
       <div>Executive Portfolio</div>
     </div>
   </main>
 
-  <!-- Floating CTA (WhatsApp permanece) -->
+  <!-- Floating CTA -->
   <div class="floatCta">
+    <a class="btn primary" href="https://www.linkedin.com/in/adv-higor-aguiar" target="_blank" rel="noreferrer">Fale com Higor (LinkedIn)</a>
     <a class="btn whats" href="https://wa.me/5511988610446" target="_blank" rel="noreferrer">Fale com Higor (WhatsApp)</a>
   </div>
 
@@ -850,12 +916,10 @@
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("in"); });
     }, { threshold: 0.12 });
-
     els.forEach((el, idx) => {
       el.style.transitionDelay = Math.min(idx * 90, 360) + "ms";
       io.observe(el);
     });
-
     window.addEventListener("load", () => {
       setTimeout(() => els.forEach(el => {
         const r = el.getBoundingClientRect();
@@ -865,10 +929,10 @@
 
     // Copiar mensagem
     const copyBtn = document.getElementById("copyBtn");
-    const copyText = document.getElementById("copyText").innerText.trim();
     copyBtn.addEventListener("click", async () => {
+      const txt = document.getElementById("copyText").innerText.trim();
       try{
-        await navigator.clipboard.writeText(copyText);
+        await navigator.clipboard.writeText(txt);
         copyBtn.textContent = "Copiado ✓";
         setTimeout(()=> copyBtn.textContent = "Copiar mensagem", 1600);
       }catch(e){
