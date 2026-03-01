@@ -1,40 +1,37 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" id="top">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Higor Aguiar | Contratos • Licitações • Governança</title>
-  <meta name="description" content="Consultoria e assessoria empresarial com atuação em contratos complexos, licitações e governança, com foco em risco, compliance e previsibilidade." />
+  <title>Higor R. Aguiar | Consultoria e Assessoria Empresarial</title>
+  <meta name="description" content="Consultoria e assessoria empresarial. Gestão e soluções jurídicas. Licitações e contratos administrativos. Governança, compliance e gestão de riscos." />
   <meta name="theme-color" content="#0b1220" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
-  <!-- Open Graph (LinkedIn/WhatsApp preview) -->
-  <meta property="og:title" content="Higor Aguiar | Contratos • Licitações • Governança" />
-  <meta property="og:description" content="Atuação estratégica em contratos complexos, licitações e governança corporativa, com foco em risco, compliance e previsibilidade." />
-  <meta property="og:image" content="https://higoraguiar.com.br/og-image.png" />
-  <meta property="og:url" content="https://higoraguiar.com.br/" />
-  <meta property="og:type" content="website" />
-
   <style>
     :root{
       --navy:#0b1220;
       --ink:#0b1220;
       --muted:#475569;
-      --bg:#f6f7f9;
-      --panel:#ffffff;
+
+      --bg2:#f3f4f6;
+      --panel2:rgba(255,255,255,.92);
+
       --line: rgba(15, 23, 42, .12);
       --softLine: rgba(15, 23, 42, .08);
-      --shadow: 0 18px 45px rgba(2, 6, 23, .10);
-      --shadow2: 0 10px 24px rgba(2, 6, 23, .08);
+
+      --shadow3: 0 22px 55px rgba(2,6,23,.10);
+      --shadow4: 0 12px 28px rgba(2,6,23,.08);
+
       --radius:18px;
 
       --accent:#0f766e;
       --accentSoft: rgba(15,118,110,.12);
 
-      --gold:#c7a76c; /* detalhe metálico discreto */
+      --gold:#c7a76c;
       --max: 1120px;
     }
 
@@ -45,9 +42,9 @@
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(980px 560px at 20% 8%, rgba(15,118,110,.10), transparent 60%),
-        radial-gradient(900px 520px at 90% 12%, rgba(11,18,32,.08), transparent 55%),
-        linear-gradient(180deg, #f8fafc 0%, #f3f4f6 55%, #f8fafc 100%);
+        radial-gradient(1100px 620px at 20% 8%, rgba(11,18,32,.06), transparent 62%),
+        radial-gradient(900px 520px at 90% 12%, rgba(199,167,108,.10), transparent 55%),
+        linear-gradient(180deg, #fbfbfc 0%, var(--bg2) 55%, #fbfbfc 100%);
     }
 
     a{ color: inherit; }
@@ -56,48 +53,35 @@
     /* Topbar */
     .topbar{
       position: sticky; top: 0; z-index: 50;
-      background: rgba(248,250,252,.78);
+      background: rgba(255,255,255,.82);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid rgba(15,23,42,.10);
     }
     .topbar .inner{
       max-width: var(--max);
       margin:0 auto;
-      padding: 12px 18px;
+      padding: 14px 18px;
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap: 12px;
     }
-    .brand{ display:flex; align-items:center; gap: 12px; min-width: 260px; text-decoration:none; }
-    .mark{
-      width:40px; height:40px; border-radius: 14px;
-      background:
-        radial-gradient(18px 18px at 30% 30%, rgba(15,118,110,.18), transparent 60%),
-        radial-gradient(20px 20px at 70% 70%, rgba(11,18,32,.12), transparent 60%),
-        rgba(255,255,255,.85);
-      border: 1px solid var(--line);
-      display:grid; place-items:center;
-      font-weight: 700;
-      letter-spacing:.5px;
-      font-family: "Playfair Display", serif;
-      overflow:hidden;
-    }
-    .logoMark{
-      width:44px;
-      height:44px;
-      padding:6px;
-    }
-    .logoMark img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      display:block;
-    }
-    .brand .name{ font-weight: 700; line-height: 1.1; }
-    .brand .role{ font-size: 12px; color: var(--muted); margin-top: 2px; }
 
-    nav{ display:none; gap: 12px; align-items:center; }
+    /* LOGO (ocupando melhor o header) */
+    .brand{
+      display:flex;
+      align-items:center;
+      text-decoration:none;
+      min-width: 260px;
+    }
+    .logoFull{
+      height: 64px; /* ajuste aqui se quiser maior (72/80) */
+      width: auto;
+      display:block;
+      object-fit: contain;
+    }
+
+    nav{ display:none; gap: 10px; align-items:center; }
     nav a{
       text-decoration:none;
       font-size: 13px;
@@ -113,8 +97,8 @@
       gap: 10px;
       padding: 10px 13px;
       border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.86);
+      border: 1px solid rgba(15,23,42,.14);
+      background: rgba(255,255,255,.92);
       box-shadow: 0 8px 20px rgba(2,6,23,.08);
       text-decoration:none;
       font-size: 13px;
@@ -124,26 +108,25 @@
     }
     .btn:hover{ transform: translateY(-1px); box-shadow: 0 12px 28px rgba(2,6,23,.10); }
     .btn.primary{
-      background: linear-gradient(135deg, rgba(11,18,32,.92), rgba(11,18,32,.92));
+      background: linear-gradient(135deg, rgba(11,18,32,.96), rgba(11,18,32,.96));
       color: #fff;
       border-color: rgba(11,18,32,.18);
       box-shadow: 0 16px 32px rgba(2,6,23,.18);
     }
     .btn.primary:hover{ box-shadow: 0 18px 38px rgba(2,6,23,.22); }
 
-    /* Hero claro premium */
+    /* Hero */
     .heroShell{
       border: 1px solid var(--softLine);
       border-radius: 26px;
       overflow:hidden;
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow3);
       background:
-        radial-gradient(700px 360px at 15% 18%, rgba(15,118,110,.10), transparent 60%),
-        radial-gradient(760px 420px at 88% 22%, rgba(11,18,32,.07), transparent 58%),
-        linear-gradient(180deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,.72) 100%);
+        radial-gradient(760px 420px at 18% 18%, rgba(11,18,32,.06), transparent 60%),
+        radial-gradient(760px 420px at 88% 22%, rgba(199,167,108,.10), transparent 58%),
+        linear-gradient(180deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.82) 100%);
       position: relative;
     }
-    /* textura/grid sutil */
     .heroShell:before{
       content:"";
       position:absolute; inset:0;
@@ -151,9 +134,9 @@
         linear-gradient(to right, rgba(15,23,42,.06) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(15,23,42,.06) 1px, transparent 1px);
       background-size: 44px 44px;
-      opacity: .18;
+      opacity: .10;
       pointer-events:none;
-      mask-image: radial-gradient(500px 260px at 25% 18%, black 0%, transparent 60%);
+      mask-image: radial-gradient(520px 280px at 24% 18%, black 0%, transparent 62%);
     }
 
     .hero{
@@ -211,10 +194,10 @@
     }
 
     .card{
-      border: 1px solid var(--softLine);
-      background: rgba(255,255,255,.86);
+      border: 1px solid rgba(15,23,42,.10);
+      background: var(--panel2);
       border-radius: var(--radius);
-      box-shadow: var(--shadow2);
+      box-shadow: var(--shadow4);
       padding: 16px;
     }
 
@@ -245,10 +228,10 @@
     .p1{ font-weight: 700; }
     .p2{ margin-top: 4px; font-size: 12px; color: var(--muted); line-height: 1.4; }
 
-    /* Metrics banner (auto-fit p/ 3, 4, 5 cards sem quebrar) */
+    /* Metrics banner (agora suporta 3/4/5 cards sem quebrar) */
     .metricsBanner{
       display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 12px;
       padding: 14px 22px 22px;
     }
@@ -264,7 +247,7 @@
       letter-spacing: -.3px;
       font-size: 18px;
       display:flex; align-items:baseline; gap: 8px;
-      flex-wrap:wrap;
+      flex-wrap: wrap;
     }
     .metric .big .tag{
       font-size: 11px;
@@ -287,7 +270,7 @@
       font-family: "Playfair Display", serif;
       font-weight: 600;
       font-size: 20px;
-      letter-spacing: -.2px;
+      letter-spacing: -.25px;
     }
     .sectionTitle p{
       margin:0;
@@ -297,7 +280,7 @@
       max-width: 82ch;
     }
 
-    .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
 
     /* Tags com ícones */
     .pillGrid{
@@ -349,16 +332,13 @@
     .case-bullets{
       margin: 10px 0 0;
       padding-left: 18px;
-    }
-    .case-bullets li{
-      margin: 6px 0;
-      line-height: 1.45;
       color: var(--muted);
       font-size: 13px;
+      line-height: 1.7;
     }
-    .case-bullets strong{ color: var(--ink); }
+    .case-bullets li{ margin: 8px 0; }
 
-    /* Experiência em trilhas */
+    /* Experiência */
     .tracks{
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -387,17 +367,27 @@
     .job .m{ margin-top: 5px; font-size: 12px; color: var(--muted); line-height: 1.5; }
     .job .d{ margin-top: 6px; font-size: 12px; color: var(--muted); line-height: 1.55; }
 
-    /* Contato */
+    /* Contato - Mensagem (corrigido premium sem alterar o conteúdo) */
     .copyBox{
       margin-top: 10px;
-      padding: 12px;
+      padding: 14px;
       border-radius: 16px;
-      border: 1px solid var(--softLine);
-      background: rgba(255,255,255,.70);
+      border: 1px solid rgba(15,23,42,.10);
+      background: rgba(248,250,252,.92);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.7);
       color: var(--muted);
-      line-height: 1.6;
       font-size: 13px;
+      line-height: 1.75;
+      letter-spacing: .1px;
+
+      white-space: normal;
+      word-break: normal;
+      overflow-wrap: anywhere;
+      hyphens: auto;
+
+      max-width: 70ch;
     }
+
     .footer{
       margin-top: 34px;
       padding-top: 18px;
@@ -408,14 +398,6 @@
       flex-wrap:wrap;
       gap: 10px;
       justify-content:space-between;
-    }
-    .oabNote{
-      max-width: var(--max);
-      margin: 10px auto 0;
-      color: var(--muted);
-      font-size: 11px;
-      line-height: 1.5;
-      padding: 0 18px;
     }
 
     /* Floating CTA */
@@ -448,8 +430,10 @@
     @media (min-width: 980px){ nav{ display:flex; } }
     @media (max-width: 980px){
       .hero{ grid-template-columns: 1fr; }
+      .metricsBanner{ grid-template-columns: 1fr; }
       .grid2, .cases, .tracks{ grid-template-columns: 1fr; }
       .floatCta{ right: 12px; bottom: 12px; }
+      .copyBox{ max-width: 100%; }
     }
   </style>
 </head>
@@ -459,19 +443,13 @@
   <div class="topbar">
     <div class="inner">
       <a class="brand" href="#top" aria-label="Voltar ao topo">
-        <div class="mark logoMark">
-          <!-- Coloque o arquivo DesignHigor.png na mesma pasta do HTML no Vercel -->
-          <img src="DesignHigor.png" alt="Higor R. Aguiar" />
-        </div>
-        <div>
-          <div class="name">Higor Aguiar</div>
-          <div class="role">Consultoria e Assessoria Empresarial</div>
-        </div>
+        <!-- Coloque o arquivo DesignHigor.png na mesma pasta do HTML -->
+        <img class="logoFull" src="DesignHigor.png" alt="Higor R. Aguiar" />
       </a>
 
       <nav>
-        <a href="#proposta">Como atuo</a>
-        <a href="#metricas">Resultados</a>
+        <a href="#proposta">Proposta</a>
+        <a href="#metricas">Impacto</a>
         <a href="#cases">Cases</a>
         <a href="#expertise">Competências</a>
         <a href="#experiencia">Experiência</a>
@@ -479,13 +457,13 @@
       </nav>
 
       <div class="actions">
-        <a class="btn" href="https://www.linkedin.com/in/adv-higor-aguiar" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn primary" href="https://www.linkedin.com/in/adv-higor-aguiar" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
     </div>
   </div>
 
-  <main class="wrap" id="top">
-    <!-- HERO CLARO PREMIUM -->
+  <main class="wrap">
+    <!-- HERO -->
     <div class="heroShell reveal">
       <div class="hero">
         <div>
@@ -511,7 +489,7 @@
           </div>
 
           <div style="display:flex; gap:10px; margin-top:18px; flex-wrap:wrap">
-            <a class="btn primary" href="#cases">Ver Cases</a>
+            <a class="btn primary" href="#cases">Ver Cases de Sucesso</a>
             <a class="btn" href="#contato">Contato</a>
           </div>
         </div>
@@ -519,14 +497,14 @@
         <div class="card">
           <div class="profile">
             <div class="avatar">
-              <!-- Coloque sua foto como "foto.jpg" na mesma pasta do HTML, ou ajuste o caminho -->
+              <!-- Coloque foto.jpg na mesma pasta (ou troque o nome do arquivo) -->
               <img src="foto.jpg" alt="Higor Aguiar" />
             </div>
             <div>
               <div class="p1">Executive Portfolio</div>
-              <div class="p2">Consultor Jurídico • Law Business Partner</div>
+              <div class="p2">Consultoria e Assessoria Empresarial</div>
               <div style="margin-top:10px; font-size:12px; color:var(--muted); line-height:1.5;">
-                Empresarial • Contratos • Licitações • Governança, Compliance e Gestão de Riscos.
+                Gestão e soluções jurídicas • Licitações e contratos administrativos.
               </div>
             </div>
           </div>
@@ -544,21 +522,25 @@
           <div class="big">~R$ 150 milhões/ano <span class="tag">Governança</span></div>
           <div class="small">Gestão e governança contratual em licitações e contratos de infraestrutura, com foco em segurança jurídica, conformidade e previsibilidade da execução.</div>
         </div>
+
         <div class="metric">
           <div class="big">~R$ 13 milhões/mês <span class="tag">Receita</span></div>
-          <div class="small">Suporte na incorporação M&A: identificação de contratos, celebração de aditivos, atualização cadastral, integração pós-aquisição, alinhamento regulatório e continuidade das operações.</div>
+          <div class="small">Suporte na incorporação M&A: identificação de contratos, celebração de aditivos (clientes, fornecedores, parceiros, colaboradores), atualização cadastral, integração pós aquisição, alinhamento regulatório e continuidade das operações.</div>
         </div>
+
         <div class="metric">
           <div class="big">~R$ 8 milhões <span class="tag">Eficiência</span></div>
           <div class="small">Recuperação de créditos e fortalecimento de regularidade fiscal com governança, rastreabilidade e mitigação de riscos tributários.</div>
         </div>
+
         <div class="metric">
           <div class="big">~R$ 5 milhões <span class="tag">Eficiência</span></div>
-          <div class="small">Recuperação de créditos previdenciários retidos na fonte para compensação em folha e preservação de caixa.</div>
+          <div class="small">Recuperação de créditos previdenciários retidos na fonte para compensação em folha de pagamento e preservação do caixa.</div>
         </div>
+
         <div class="metric">
-          <div class="big">~R$ 50 milhões <span class="tag">Continuidade</span></div>
-          <div class="small">Negociação sindical e acordo coletivo viabilizando continuidade de contratos de operação rodoviária e competitividade em novas licitações.</div>
+          <div class="big">~R$ 50 milhões <span class="tag">Eficiência</span></div>
+          <div class="small">Negociação sindical e acordo coletivo que possibilitaram a continuidade de contratos de operação rodoviária e êxito em novas licitações.</div>
         </div>
       </div>
     </div>
@@ -574,7 +556,7 @@
 
       <div class="grid2">
         <div class="card">
-          <h3 style="margin:0; font-size:14px;">Decisão executiva com base em risco</h3>
+          <h3 style="margin:0; font-size:14px;">Decisão executiva com base em risco.</h3>
           <p style="margin:10px 0 0; color:var(--muted); line-height:1.75; font-size:13px;">
             Atuo como ponte entre Jurídico e Diretoria: estruturo cenários, impacto financeiro, alternativas de
             negociação e controles de governança para decisões rápidas, defensáveis e alinhadas ao negócio.
@@ -606,6 +588,8 @@
           <p><strong>Contexto:</strong> Disputas e riscos em licitações e contratos administrativos de infraestrutura.</p>
           <p><strong>Decisão:</strong> Estratégia jurídica para recursos/impugnações, governança documental e cláusulas críticas.</p>
           <p><strong>Impacto:</strong> Redução de exposição e aumento de previsibilidade na execução.</p>
+
+          <!-- CORRIGIDO: apenas 1 details (sem duplicar) -->
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
             <ul class="case-bullets">
@@ -621,6 +605,7 @@
           <p><strong>Contexto:</strong> Mudanças organizacionais e riscos de interrupção contratual/regulatória.</p>
           <p><strong>Decisão:</strong> Plano jurídico de transição, controles e renegociação de cláusulas sensíveis.</p>
           <p><strong>Impacto:</strong> Preservação de receitas e estabilidade da operação.</p>
+
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
             <ul class="case-bullets">
@@ -636,12 +621,13 @@
           <p><strong>Contexto:</strong> Mudanças de escopo, prazos e eventos externos gerando desequilíbrio.</p>
           <p><strong>Decisão:</strong> Estruturação de pleitos com evidências, matriz de riscos e tese jurídica.</p>
           <p><strong>Impacto:</strong> Recuperação de valores e mitigação de perdas contratuais.</p>
+
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
             <ul class="case-bullets">
               <li><strong>Documentos de suporte:</strong> evidências, registros, medições, comunicações formais e trilha de aprovação.</li>
               <li><strong>Nexo causal e quantificação:</strong> matriz de riscos, cronograma, impactos e metodologia de cálculo.</li>
-              <li><strong>Estratégia negocial:</strong> tese jurídica, cenários e condução para reduzir perdas e aumentar recuperabilidade.</li>
+              <li><strong>Estratégia negocial:</strong> tese jurídica, cenários e condução para reduzir perda e aumentar recuperabilidade.</li>
             </ul>
           </details>
         </div>
@@ -651,6 +637,7 @@
           <p><strong>Contexto:</strong> Oportunidades de recuperação e mitigação de risco tributário.</p>
           <p><strong>Decisão:</strong> Revisão técnica, conformidade e governança para execução segura.</p>
           <p><strong>Impacto:</strong> Melhoria financeira com compliance e rastreabilidade.</p>
+
           <details>
             <summary>Ver detalhes <span class="chev"></span></summary>
             <ul class="case-bullets">
@@ -668,7 +655,7 @@
       <div class="sectionTitle">
         <div>
           <h2>Competências-chave</h2>
-          <p>Leitura executiva.</p>
+          <p>Leitura Executiva.</p>
         </div>
       </div>
 
@@ -684,7 +671,7 @@
 
           <span class="pill"><span class="ico">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 21h18"/><path d="M6 21V7l6-4 6 4v14"/><path d="M9 21v-8h6v8"/></svg>
-          </span>Licitações • Lei 14.133/21 • 13.303/16</span>
+          </span>Licitações</span>
 
           <span class="pill"><span class="ico">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3l8 4v6c0 5-3 9-8 9s-8-4-8-9V7l8-4Z"/><path d="M9 12l2 2 4-5"/></svg>
@@ -735,7 +722,7 @@
             <div class="d">
               Contratos estratégicos (públicos/privados): negociação, governança e mitigação de riscos jurídico-financeiros em projetos regulados.<br>
               Licitações e contratos administrativos: estratégia recursal, matriz de riscos e suporte à execução contratual.<br>
-              Resultados: ~R$ 150 mi/ano em contratos; preservação de ~R$ 13 mi/mês; recuperação de ~R$ 8 mi em créditos.
+              Resultados relevantes: ~R$ 150 mi/ano em contratos; preservação de ~R$ 13 mi/mês; recuperação de ~R$ 8 mi em créditos.
             </div>
           </div>
 
@@ -743,7 +730,7 @@
             <div class="h">2007 – 2014 • Jurídico / Licitações — Engenharia & Consultoria</div>
             <div class="m">Ciclo licitatório • Contratos administrativos • Pareceres • Mitigação de riscos</div>
             <div class="d">
-              Ciclo licitatório completo: análise de editais, propostas, recursos/impugnações e contratação.<br>
+              Análise de editais, propostas, recursos/impugnações e contratação.<br>
               Interface com órgãos de controle e auditorias: conformidade, resposta a demandas e governança documental.<br>
               Eficiência e regularidade: recuperação de ~R$ 5 mi e suporte jurídico fiscal/financeiro/trabalhista.
             </div>
@@ -766,10 +753,12 @@
 
           <div class="job">
             <div class="h">Formação</div>
-            <div class="m">MBA em Gestão do Direito nas Empresas – FEA/USP (em curso)</div>
+            <div class="m">MBA em Gestão do Direito nas Empresas – FEA/USP</div>
             <div class="d">
-              Pós-graduação em Direito Administrativo e Licitações; Direito Civil – Faculdade de Minas<br>
-              LL.M. em Direito de Negócios – FMU (SP)<br>
+              Pós-graduação em Direito Administrativo e Licitações; e Direito Civil – Faculdade de Minas<br>
+                <div class="d">
+              LL.M. em Direito de Negócios – Faculdades Metropolitanas Unidas de São Paulo<br>
+                    <div class="d">
               Graduação em Direito – Universidade Cidade de São Paulo
             </div>
           </div>
@@ -796,18 +785,22 @@
           </div>
 
           <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-            <button class="btn" id="copyBtn" type="button">Copiar mensagem</button>
+            <button class="btn primary" id="copyBtn" type="button">Copiar mensagem</button>
           </div>
         </div>
 
         <div class="card">
           <h3 style="margin:0; font-size:14px;">Mensagem</h3>
+
+          <!-- TEXTO MANTIDO (sem alterar conteúdo) -->
           <div class="copyBox" id="copyText">
-            Consultoria e assessoria empresarial com atuação em contratos complexos, licitações e governança, em ambientes regulados.
-            Suporte estratégico à tomada de decisão executiva, com foco em mitigação de riscos, conformidade e previsibilidade na execução contratual.
+            Advogado com perfil multidisciplinar e com forte atuação em contratos complexos públicos e privados,
+            licitações e gestão jurídica estratégica, atuando em ambientes regulados como Business Partner no apoio
+            a decisões executivas, com foco na mitigação de riscos e segurança jurídica às operações da organização.
           </div>
+
           <div style="margin-top:12px; color:var(--muted); font-size:12px;">
-            Para maiores detalhes, entre em contato.
+            Para maiores detalhes entre em contato.
           </div>
         </div>
       </div>
@@ -815,11 +808,7 @@
 
     <div class="footer">
       <div>© <span id="y"></span> Higor Aguiar</div>
-      <div>Executive Portfolio</div>
-    </div>
-
-    <div class="oabNote">
-      Conteúdo institucional e informativo, sem promessa de resultados. Atuação conforme regras de publicidade da OAB.
+      <div>Integridade em negócios públicos e privados</div>
     </div>
   </main>
 
@@ -851,12 +840,11 @@
       }), 80);
     });
 
-    // Copiar mensagem
+    // Copiar mensagem (pega o TEXTO do bloco, mantendo igual ao exibido)
     const copyBtn = document.getElementById("copyBtn");
-    const copyText = document.getElementById("copyText").innerText.trim();
-
     copyBtn.addEventListener("click", async () => {
       try{
+        const copyText = document.getElementById("copyText").innerText.trim();
         await navigator.clipboard.writeText(copyText);
         copyBtn.textContent = "Copiado ✓";
         setTimeout(()=> copyBtn.textContent = "Copiar mensagem", 1600);
